@@ -1,0 +1,21 @@
+$font-brand: "Kanit", sans-serif;
+$tablet: 768px;
+$desktop: 992px;
+
+$colors: (
+  // Color principal
+  primary: #e1523d,
+  primary-light: lighten(#e1523d, 10%),
+  primary-dark: darken(#e1523d, 10%),
+  // Colores por proceso
+  third: #0b8c73,
+  third-dark: #085b4b,
+  third-light: #0c9279,
+);
+
+// To convert from hex to filter: https://codepen.io/sosuke/pen/Pjoqqp
+// Filtros usados para cambiar el color de un icono en formato svg.
+$filters: (
+  primary: invert(41%) sepia(87%) saturate(1507%) hue-rotate(343deg) brightness(96%) contrast(90%),
+  third: invert(40%) sepia(62%) saturate(554%) hue-rotate(118deg) brightness(96%) contrast(97%)
+)

@@ -17,6 +17,7 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
     devtool: 'eval-source-map',
     devServer: {
         contentBase: './build/www',
+        port: 9001,
         proxy: [{
             context: [
                 /* jhipster-needle-add-entity-to-webpack - JHipster will add entity api paths here */
@@ -29,7 +30,7 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
             ],
             target: 'http://127.0.0.1:8080',
             secure: false,
-            headers: { host: 'localhost:9000' }
+            headers: { host: 'localhost:9001' }
         },{
             context: [
                 '/websocket'
@@ -115,9 +116,9 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
         new ForkTsCheckerWebpackPlugin(),
         new BrowserSyncPlugin({
             host: 'localhost',
-            port: 9000,
+            port: 9001,
             proxy: {
-                target: 'http://localhost:9060',
+                target: 'http://localhost:9061',
                 ws: true
             }
         }, {
