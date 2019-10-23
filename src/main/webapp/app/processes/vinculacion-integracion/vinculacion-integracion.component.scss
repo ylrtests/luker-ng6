@@ -1,0 +1,174 @@
+@import "src/main/webapp/content/scss/custom-functions";
+@import "src/main/webapp/content/scss/custom-variables";
+
+#vinculacion .hero.process-hero {
+  background-image: url("/content/images/process-hero.jpg");
+
+  @include tablet {
+    height: 55vh;
+    max-height: 415px;
+  }
+  @include desktop {
+    justify-content: initial;
+  }
+
+  div:first-child {
+    position: relative;
+    margin: 0.625rem 0 0 2%;
+    text-align: center;
+    h1 {
+      color: #fff;
+      text-transform: uppercase;
+      text-shadow: 6px 5px 9px rgba(10, 10, 10, 0.77);
+      font-size: 2rem;
+      font-weight: 900;
+      @include desktop {
+        font-size: 3.2rem;
+      }
+    }
+    .map-container {
+      z-index: 2;
+      height: 75%;
+      max-width: 438px;
+      max-height: 438px;
+      @include tablet {
+        height: 85%;
+        position: absolute;
+      }
+      @include desktop {
+        height: 115%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .buttons-top {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    @include desktop {
+      flex-grow: 1;
+    }
+
+    .btn-brand {
+      margin-right: 1.25rem;
+      text-transform: uppercase;
+    }
+
+    .title-process {
+      z-index: 2;
+      width: 100%;
+      @include tablet {
+        bottom: -45px;
+        position: absolute;
+      }
+      h2 {
+        font-size: 2.3rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-bottom: 0;
+      }
+      h2:first-child {
+        color: #fff;
+        text-shadow: 6px 5px 9px rgba(10, 10, 10, 0.4);
+      }
+      h2:last-child {
+        color: color(third);
+        float: right;
+        @include desktop {
+          margin-left: 15%;
+          float: none;
+        }
+      }
+    }
+  }
+}
+
+#vinculacion .process-bottom {
+  background-color: #fff;
+  flex-grow: 1;
+  max-height: 455px;
+  position: relative;
+
+  .text-process {
+    width: calc(100% + 1px);
+    position: relative;
+    z-index: 1;
+    margin-top: 8%;
+    margin-bottom: 1.5rem;
+
+    div {
+      color: #fff;
+      background-color: color(third);
+      padding: 10px 15% 10px 3%;
+      border-radius: 25px 0 0 25px;
+      text-align: justify;
+      font-weight: 400;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      border: 1px solid #bfbfbf;
+      width: 80%;
+      height: 125%;
+      top: -12%;
+      border-radius: 25px;
+      z-index: -1;
+      left: 2.5%;
+    }
+  }
+
+  .buttons-bottom {
+    margin-bottom: 20px;
+    width: fit-content;
+    width: -moz-fit-content;
+    display: flex;
+    justify-content: initial;
+    align-items: flex-end;
+    flex-flow: column nowrap;
+    margin: 0 auto 10px;
+
+    @include tablet {
+      flex-flow: row nowrap;
+      margin: 0 0 10px 0;
+    }
+
+    div:first-child {
+      text-align: right;
+      margin-right: 5rem;
+      position: relative;
+      h3 {
+        margin: 0;
+        text-transform: uppercase;
+        color: grey;
+        font-size: 1.5rem;
+      }
+      h3:first-child {
+        font-weight: 900;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 80%;
+        right: -2.5rem;
+        width: 2px;
+        background-color: color(third);
+        top: 10%;
+      }
+    }
+
+    .btn-brand {
+      margin-right: 2rem;
+      margin-top: 30px;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+    }
+  }
+}
