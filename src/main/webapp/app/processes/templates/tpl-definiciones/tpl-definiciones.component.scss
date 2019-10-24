@@ -1,0 +1,133 @@
+@import "src/main/webapp/content/scss/custom-functions";
+@import "src/main/webapp/content/scss/custom-variables";
+
+#definiciones .hero.definicion-hero {
+  background-image: url("/content/images/definicion-hero.jpg");
+  border-bottom: none;
+
+  @include tablet {
+    height: 45vh;
+    max-height: 350px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  div:first-child {
+    @include tablet {
+      margin-right: 1rem;
+    }
+
+    .btn-brand {
+      width: 90%;
+      text-transform: uppercase;
+      margin: 0 auto 1rem;
+      font-size: 2rem;
+      padding: 0;
+      line-height: 1.2;
+      display: block;
+      cursor: default;
+
+      .btn-badge {
+        width: 70px;
+        height: 70px;
+        left: -28px;
+        top: -16px;
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &:hover {
+        transform: none;
+      }
+    }
+    h1:first-of-type {
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 900;
+    }
+  }
+}
+
+#definiciones .definicion-bottom {
+  background-color: #fff;
+  flex-grow: 1;
+  max-height: fit-content;
+  position: relative;
+  .list {
+    line-height: 1rem;
+    padding: 0 15px 0 25px;
+    list-style: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #8e8888;
+  }
+
+  .item-wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    .item {
+      flex: 1;
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        margin-top: 1rem;
+        h2:first-of-type {
+          font-weight: 600;
+          font-size: 1.75rem;
+          text-align: center;
+          color: #8e8888;
+        }
+      }
+      .img-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        img:first-of-type {
+          margin: 0.5rem auto;
+          display: block;
+          height: 75px;
+        }
+      }
+
+      &.invert{
+        color: #fff;
+        .header{
+          h2:first-of-type {
+            color: #fff;
+          }
+        }
+        .img-wrapper {
+          img:first-of-type {
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(160deg) brightness(106%) contrast(104%);;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Reglas que pueden ser usadas por los templates insertados desde otro componente
+:host ::ng-deep {
+  .list li {
+    margin: 0.5rem;
+    position: relative;
+    .bullet {
+      font-size: 2.5rem;
+      position: absolute;
+      top: 0;
+      left: -20px;
+
+      &.sm {
+        font-size: 1.8rem;
+        top: -3px;
+      }
+    }
+  }
+}

@@ -55,7 +55,7 @@ Generic styles
 .jh-card {
   padding: 0 1.5%;
   margin-top: 20px;
-  &.card{
+  &.card {
     border: none;
   }
 }
@@ -264,17 +264,11 @@ ui bootstrap tweaks
 
 .btn-brand {
   background: color(primary);
-  box-shadow: 0 0 0 1px color(primary);
   border-radius: 10px;
   position: relative;
   color: #fff !important;
   transition: all 0.3s ease 0s;
   width: fit-content;
-
-  &.brand-third {
-    background: color(third);
-    box-shadow: 0 0 0 1px color(third);
-  }
 
   .btn-badge {
     position: absolute;
@@ -339,9 +333,23 @@ ui bootstrap tweaks
   &.primary {
     filter: colorFilter(primary);
   }
-
+  &.first {
+    filter: colorFilter(first);
+  }
+  &.second {
+    filter: colorFilter(second);
+  }
   &.third {
     filter: colorFilter(third);
+  }
+  &.fourth {
+    filter: colorFilter(fourth);
+  }
+  &.fifth {
+    filter: colorFilter(fifth);
+  }
+  &.sixth {
+    filter: colorFilter(sixth);
   }
 }
 
@@ -377,7 +385,6 @@ ui bootstrap tweaks
   display: none;
 }
 
-
 // Estilos caja de herramientas
 .toolbox .modal-dialog {
   @include tablet {
@@ -387,5 +394,118 @@ ui bootstrap tweaks
     border: none;
   }
 }
+
+// Clases de colores  y fondos para los procesos
+
+// Empieza colores
+.color-1 {
+  color: color(first);
+  &.light {
+    color: color(first-light);
+  }
+  &.dark {
+    color: color(first-dark);
+  }
+}
+.color-2 {
+  color: color(second);
+  &.light {
+    color: color(second-light);
+  }
+  &.dark {
+    color: color(second-dark);
+  }
+}
+.color-3 {
+  color: color(third);
+  &.light {
+    color: color(third-light);
+  }
+  &.dark {
+    color: color(third-dark);
+  }
+}
+.color-4 {
+  color: color(fourth);
+  &.light {
+    color: color(fourth-light);
+  }
+  &.dark {
+    color: color(fourth-dark);
+  }
+}
+.color-5 {
+  color: color(fifth);
+  &.light {
+    color: color(fifth-light);
+  }
+  &.dark {
+    color: color(fifth-dark);
+  }
+}
+.color-6 {
+  color: color(sixth);
+  &.light {
+    color: color(sixth-light);
+  }
+  &.dark {
+    color: color(sixth-dark);
+  }
+}// Fin colores
+// Fondos
+.bg-1 {
+  background-color: color(first);
+  &.light {
+    background-color: color(first-light);
+  }
+  &.dark {
+    background-color: color(first-dark);
+  }
+}
+.bg-2 {
+  background-color: color(second);
+  &.light {
+    background-color: color(second-light);
+  }
+  &.dark {
+    background-color: color(second-dark);
+  }
+}
+.bg-3 {
+  background-color: color(third);
+  &.light {
+    background-color: color(third-light);
+  }
+  &.dark {
+    background-color: color(third-dark);
+  }
+}
+.bg-4 {
+  background-color: color(fourth);
+  &.light {
+    background-color: color(fourth-light);
+  }
+  &.dark {
+    background-color: color(fourth-dark);
+  }
+}
+.bg-5 {
+  background-color: color(fifth);
+  &.light {
+    background-color: color(fifth-light);
+  }
+  &.dark {
+    background-color: color(fifth-dark);
+  }
+}
+.bg-6 {
+  background-color: color(sixth);
+  &.light {
+    background-color: color(sixth-light);
+  }
+  &.dark {
+    background-color: color(sixth-dark);
+  }
+}// Fin fondos
 
 /* jhipster-needle-scss-add-main JHipster will add new css style */
