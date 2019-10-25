@@ -4,10 +4,12 @@
             <div class="hero home-hero">
                 <div>
                     <h1 class="font-brand">Talento & gestión</h1>
-                    <button class="btn btn-brand" (click)="login()" >Iniciar <span class="font-weight-bold">sesión</span></button>
+                    <button *ngIf="!isAuthenticated()" class="btn btn-brand" (click)="login()" >Iniciar <span class="font-weight-bold">sesión</span></button>
                 </div>
-                <div class="map-container">
-                    <jhi-map-luker></jhi-map-luker>
+                <div class="map-container" [ngSwitch]="isAuthenticated()">
+                    <jhi-map-luker *ngSwitchCase="true"></jhi-map-luker>
+                    <jhi-map-luker *ngSwitchCase="false"
+                    [shouldOpenLogin] = "true"></jhi-map-luker>
                 </div>
             </div>
         </div>
