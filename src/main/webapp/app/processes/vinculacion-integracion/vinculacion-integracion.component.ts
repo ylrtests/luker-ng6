@@ -1,10 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { TplCajaHerramientasComponent } from '../templates/tpl-caja-herramientas/tpl-caja-herramientas.component';
 
 @Component({
   selector: 'jhi-vinculacion-integracion',
   templateUrl: './vinculacion-integracion.component.html',
-  styleUrls: ['./vinculacion-integracion.component.scss', './vinculacion-integracion-tools.component.scss']
+  styleUrls: ['./vinculacion-integracion.component.scss']
 })
 export class VinculacionIntegracionComponent implements OnInit, OnDestroy {
 
@@ -21,7 +21,9 @@ export class VinculacionIntegracionComponent implements OnInit, OnDestroy {
     ]
   };
 
-  constructor(private modalService: NgbModal) { }
+  @ViewChild(TplCajaHerramientasComponent) cajaHerramientas: TplCajaHerramientasComponent;
+
+  constructor() { }
 
   ngOnInit() {
 
@@ -29,10 +31,6 @@ export class VinculacionIntegracionComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     // this.modalService.dismissAll();
-  }
-
-  open(modalTools) {
-    this.modalService.open(modalTools, { windowClass: 'toolbox' });
   }
 
 }

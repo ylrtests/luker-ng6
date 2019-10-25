@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, TemplateRef } from '@angular/core';
-import { isIP } from 'net';
+import { Component, OnInit, Input, TemplateRef, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'jhi-tpl-definiciones',
@@ -11,10 +10,12 @@ export class TplDefinicionesComponent implements OnInit {
   @Input() processNumber: number;
   @Input() titleTemplate?: TemplateRef<any>;
   @Input() listPrincipiosTemplate?: TemplateRef<any>;
+  @Input() listProcesosTemplate?: TemplateRef<any>;
+  @Input() listElementosTemplate?: TemplateRef<any>;
 
   public processClasses: object;
 
-  constructor() { }
+  constructor(private elem: ElementRef) { }
 
   ngOnInit() {
     // En un objeto, asigna las clases que usará,

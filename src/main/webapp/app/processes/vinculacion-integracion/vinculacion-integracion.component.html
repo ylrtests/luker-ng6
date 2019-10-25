@@ -5,17 +5,19 @@
                 <div>
                     <h1 class="font-brand">Talento & gestión</h1>
                     <div class="map-container">
-                        <jhi-map-luker [activeElement] = "3"></jhi-map-luker>
+                        <jhi-map-luker [activeElement]="3"></jhi-map-luker>
                     </div>
                 </div>
                 <div class="buttons-top">
                     <a class="btn btn-brand bg-3 filled">
                         <span class="font-weight-bold">Vinculación</span>
-                        <span class="btn-badge"><img src="/content/icons/shakehand.svg" alt="" class="icon third"></span>
+                        <span class="btn-badge"><img src="/content/icons/shakehand.svg" alt=""
+                                class="icon third"></span>
                     </a>
                     <a class="btn btn-brand bg-3 filled">
                         <span class="font-weight-bold">Integración</span>
-                        <span class="btn-badge"><img src="/content/icons/group-meet.svg" alt="" class="icon third"></span>
+                        <span class="btn-badge"><img src="/content/icons/group-meet.svg" alt=""
+                                class="icon third"></span>
                     </a>
                     <div class="title-process">
                         <h2 class="font-brand">Vinculación</h2>
@@ -42,7 +44,7 @@
                     <h3>Conoce</h3>
                     <h3>Más</h3>
                 </div>
-                <a class="btn btn-brand bg-3" (click)="open(modalTools)">
+                <a class="btn btn-brand bg-3" (click)="cajaHerramientasModal.open()">
                     <span class="font-weight-bold">Caja de herramientas</span>
                     <span class="btn-badge"><img src="/content/icons/tool.svg" alt="" class="icon third"></span>
                 </a>
@@ -56,34 +58,4 @@
 </div>
 
 <!-- Modal Caja de Herramientas -->
-<ng-template #modalTools let-c="close">
-    <div class="modal-header">
-        <div class="header-top">
-            <img src="/content/icons/close.png" alt="Cerrar" (click)="c('Cross click')">
-        </div>
-        <div class="header-logo">
-            <div class="header-line"></div>
-            <img src="/content/logo.svg" class="logo" alt="logo">
-            <div class="header-line"></div>
-        </div>
-    </div>
-    <div class="modal-body">
-        <h1>Caja de herramientas</h1>
-        <div class="toolbox-content">
-            <div class="toolbox-column">
-                <h2>Formatos<br />para descargar</h2>
-                <a *ngFor = "let item of modalElements.first"  href="{{item.url}}" class="btn-modal">{{item.title}}</a>
-            </div>
-
-            <div class="toolbox-column">
-                <h2>Formatos<br />para descargar</h2>
-                <a *ngFor = "let item of modalElements.second"  href="{{item.url}}" class="btn-modal">{{item.title}}</a>
-            </div>
-        </div>
-
-        <div class="toolbox-footer">
-            <h2 class="font-brand">Vinculación e integración</h2>
-            <div><img src="/content/icons/tool.svg" alt="" class="icon third"></div>
-        </div>
-    </div>
-</ng-template>
+<jhi-tpl-caja-herramientas #cajaHerramientasModal></jhi-tpl-caja-herramientas>

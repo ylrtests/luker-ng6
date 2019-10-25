@@ -64,7 +64,6 @@
     font-weight: 400;
     color: #8e8888;
   }
-
   .item-wrapper {
     width: 100%;
     display: flex;
@@ -77,9 +76,10 @@
         align-items: center;
         height: 70px;
         margin-top: 1rem;
+        margin-bottom: 1rem;
         h2:first-of-type {
-          font-weight: 600;
-          font-size: 1.75rem;
+          font-weight: 700;
+          font-size: 1.6rem;
           text-align: center;
           color: #8e8888;
         }
@@ -89,24 +89,28 @@
         justify-content: center;
         align-items: center;
         height: 80px;
+        margin-bottom: 1.5rem;
         img:first-of-type {
           margin: 0.5rem auto;
           display: block;
           height: 75px;
         }
       }
-
-      &.invert{
+      // Estilos cuando el fondo sea del color del proceso
+      &.invert {
         color: #fff;
-        .header{
+        .header {
           h2:first-of-type {
             color: #fff;
           }
         }
         .img-wrapper {
           img:first-of-type {
-            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(160deg) brightness(106%) contrast(104%);;
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(160deg) brightness(106%) contrast(104%);
           }
+        }
+        .list {
+          color: #fff;
         }
       }
     }
@@ -118,16 +122,37 @@
   .list li {
     margin: 0.5rem;
     position: relative;
-    .bullet {
+    &::before {
+      content: "\2022";
       font-size: 2.5rem;
       position: absolute;
       top: 0;
       left: -20px;
+    }
+    // Color del bullet del list item
+    &.blt-1::before {
+      color: color(first-light);
+    }
+    &.blt-2::before {
+      color: color(second-light);
+    }
+    &.blt-3::before {
+      color: color(third-light);
+    }
+    &.blt-4::before {
+      color: color(fourth-light);
+    }
+    &.blt-5::before {
+      color: color(fifth-light);
+    }
+    &.blt-6::before {
+      color: color(sixth-light);
+    }
 
-      &.sm {
-        font-size: 1.8rem;
-        top: -3px;
-      }
+    &.blt-sm::before {
+      font-size: 1.7rem;
+      top: -2px;
+      left: -15px;
     }
   }
 }

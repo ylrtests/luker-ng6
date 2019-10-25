@@ -52,7 +52,6 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    background-color: color(third-dark);
     color: #fff;
     padding: 5px 0;
     margin-bottom: 0.875rem;
@@ -60,7 +59,6 @@
   .toolbox-content {
     display: flex;
     flex-flow: row wrap;
-    background-color: color(third-light);
     justify-content: space-between;
 
     .toolbox-column {
@@ -75,7 +73,7 @@
         text-align: center;
         font-weight: 600;
         text-transform: uppercase;
-        color: white;
+        color: #fff;;
         position: relative;
         width: 100%;
         margin-bottom: 15px;
@@ -85,7 +83,8 @@
           height: 2px;
           width: 100%;
           position: absolute;
-          background-color: #3da792;
+          background-color: #fff;
+          opacity: 0.2;
           bottom: -10px;
           left: 0;
         }
@@ -95,7 +94,6 @@
 
   .toolbox-footer {
     position: relative;
-    background-color: color(third-light);
     min-height: 115px;
     margin-bottom: 60px;
     padding-bottom: 5px;
@@ -104,12 +102,13 @@
       text-align: center;
       font-weight: 600;
       text-transform: uppercase;
-      color: rgba(8, 91, 75, 0.4);
+      color: #000;
+      opacity: 0.2;
       position: relative;
       width: 100%;
       margin-bottom: 5px;
     }
-    div {
+    div:first-of-type {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -132,15 +131,11 @@
       position: absolute;
       width: 50px;
       height: 50px;
-      background-color: color(third-light);
+      background-color: inherit;
       transform: rotate(45deg);
       bottom: -25px;
       left: 50%;
       margin-left: -25px;
     }
   }
-}
-
-.btn-modal {
-  color: color(third);
 }
