@@ -53,7 +53,9 @@ Main page styles
 
 .home-bottom {
   flex-grow: 1;
-  max-height: 300px;
+  @include tablet {
+    max-height: 300px;
+  }
 
   .bottom-panel {
     background-image: url("/content/images/home/home-bottom.jpg");

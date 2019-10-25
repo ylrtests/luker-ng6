@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, TemplateRef, ElementRef } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'jhi-tpl-definiciones',
@@ -15,7 +16,7 @@ export class TplDefinicionesComponent implements OnInit {
 
   public processClasses: object;
 
-  constructor(private elem: ElementRef) { }
+  constructor(private elem: ElementRef, private location: Location) { }
 
   ngOnInit() {
     // En un objeto, asigna las clases que usará,
@@ -70,6 +71,11 @@ export class TplDefinicionesComponent implements OnInit {
           'icon': 'first'
         };
     }
+  }
+
+  // Función que se usa para volver a la página anterior
+  goBack() {
+    this.location.back();
   }
 
 }
