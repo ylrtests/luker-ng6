@@ -16,7 +16,7 @@ export class TplCajaHerramientasComponent implements OnInit {
   @Input() titleProcess = 'Placeholder';
   @Input() positionTitleProcess = 'center'; // Center - right - left
 
-  public processClasses: object;
+  public processClasses: any;
 
   constructor(private modalService: NgbModal) { }
 

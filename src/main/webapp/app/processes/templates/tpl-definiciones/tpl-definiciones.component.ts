@@ -14,7 +14,7 @@ export class TplDefinicionesComponent implements OnInit {
   @Input() listProcesosTemplate?: TemplateRef<any>;
   @Input() listElementosTemplate?: TemplateRef<any>;
 
-  public processClasses: object;
+  public processClasses: any;
 
   constructor(private elem: ElementRef, private location: Location) { }
 
