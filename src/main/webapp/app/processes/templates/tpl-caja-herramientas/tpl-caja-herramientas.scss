@@ -1,6 +1,19 @@
 @import "src/main/webapp/content/scss/custom-functions";
 @import "src/main/webapp/content/scss/custom-variables";
 
+#main-title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #000;
+  opacity: 0.2;
+  position: relative;
+  width: 100%;
+  padding-top: 1rem;
+  margin-bottom: 5px;
+}
+
 .modal-header {
   padding: 0;
   flex-flow: column nowrap;
@@ -65,20 +78,21 @@
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
-      padding: 15px;
+      padding: 15px 15px 0;
       width: 48%;
-
-      h2:first-child {
+      white-space: pre-line;
+      h2 {
         font-size: 1.2rem;
         text-align: center;
         font-weight: 600;
         text-transform: uppercase;
-        color: #fff;;
+        color: #fff;
         position: relative;
         width: 100%;
+      }
+      h2.subtitle {
         margin-bottom: 15px;
-
-        &:after {
+        &::after {
           content: "";
           height: 2px;
           width: 100%;
@@ -92,22 +106,42 @@
     }
   }
 
+  .column-item {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+
+    .title-wrapper {
+      width: 25%;
+      h2:first-child {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        display: inline-block;
+        overflow: visible;
+        padding: 5px;
+        margin: 5px 0;
+      }
+    }
+
+    .link-wrapper {
+      flex-grow: 1;
+      .btn-modal {
+        display: block;
+        width: 90%;
+        margin-bottom: 0.7rem;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
   .toolbox-footer {
     position: relative;
     min-height: 115px;
     margin-bottom: 60px;
     padding-bottom: 5px;
-    h2:first-child {
-      font-size: 2rem;
-      text-align: center;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: #000;
-      opacity: 0.2;
-      position: relative;
-      width: 100%;
-      margin-bottom: 5px;
-    }
     div:first-of-type {
       display: flex;
       align-items: center;

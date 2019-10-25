@@ -8,16 +8,26 @@ import { TplCajaHerramientasComponent } from '../templates/tpl-caja-herramientas
 })
 export class VinculacionIntegracionComponent implements OnInit, OnDestroy {
 
-  modalElements = {
-    first: [
-      { title: 'Descripción de cargo', url: 'www.google.com' },
-      { title: 'Ficha de selección', url: 'www.google.com' },
-      { title: 'Formato de entrevista', url: 'www.google.com' },
+  elementsCajaHerramientas = {
+    first: [ // Elementos de la primera columna
+      {
+        subtitle: '',
+        items: [
+          { title: 'Descripción de cargo', url: 'https://github.com' },
+          { title: 'Ficha de selección', url: 'https://github.com' },
+          { title: 'Formato de entrevista', url: 'https://github.com' },
+        ]
+      }
     ],
-    second: [
-      { title: 'Matriz de entrenamiento', url: 'www.google.com' },
-      { title: 'Verificación del proceso', url: 'www.google.com' },
-      { title: 'Encuesta de satisfacción', url: 'www.google.com' },
+    second: [ // Elementos de la segunda columna
+      {
+        subtitle: '',
+        items: [
+          { title: 'Matriz de entrenamiento', url: 'https://github.com' },
+          { title: 'Verificación del proceso', url: 'https://github.com' },
+          { title: 'Encuesta de satisfacción', url: 'https://github.com' },
+        ]
+      }
     ]
   };
 

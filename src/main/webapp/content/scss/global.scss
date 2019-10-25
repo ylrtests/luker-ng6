@@ -311,9 +311,8 @@ ui bootstrap tweaks
   position: relative;
   background: #fff !important;
   transition: all 0.3s ease 0s;
-  width: 90%;
   margin: 5px auto;
-  padding: 5px 15px;
+  padding: 3px 13px;
   text-decoration: none;
   font-weight: 600;
 
@@ -451,7 +450,7 @@ ui bootstrap tweaks
   &.dark {
     color: color(sixth-dark);
   }
-}// Fin colores
+} // Fin colores
 // Fondos
 .bg-1 {
   background-color: color(first);
@@ -506,6 +505,6 @@ ui bootstrap tweaks
   &.dark {
     background-color: color(sixth-dark);
   }
-}// Fin fondos
+} // Fin fondos
 
 /* jhipster-needle-scss-add-main JHipster will add new css style */

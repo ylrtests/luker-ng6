@@ -8,7 +8,7 @@ import { Component, OnInit, Input, TemplateRef, ElementRef } from '@angular/core
 export class TplDefinicionesComponent implements OnInit {
 
   @Input() processNumber: number;
-  @Input() titleTemplate?: TemplateRef<any>;
+  @Input() processTitle?: string;
   @Input() listPrincipiosTemplate?: TemplateRef<any>;
   @Input() listProcesosTemplate?: TemplateRef<any>;
   @Input() listElementosTemplate?: TemplateRef<any>;

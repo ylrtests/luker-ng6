@@ -9,7 +9,7 @@
                                 [ngClass]="processClasses.icon"></span>
                     </div>
                     <h1 class="font-brand">
-                        <ng-container *ngTemplateOutlet="titleTemplate ? titleTemplate : defaultTitle"></ng-container>
+                        {{processTitle}}
                     </h1>
                 </div>
             </div>
@@ -58,7 +58,6 @@
 
 
 <!-- Default rendering -->
-<ng-template #defaultTitle>Compromiso y Reconocimiento</ng-template>
 <ng-template #defaultList>
     <li>Lorem ipsum dolor sit amet consectetur
         adipisicing elit.
