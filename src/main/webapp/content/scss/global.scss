@@ -425,6 +425,15 @@ ui bootstrap tweaks
   }
 }
 
+.toolbox-sm .modal-dialog {
+  @include md-screen {
+    max-width: 575px;
+  }
+  .modal-content {
+    border: none;
+  }
+}
+
 // Clases de colores  y fondos para los procesos
 
 // Empieza colores

@@ -6,8 +6,14 @@ export const PROCESSES_ROUTE: Route = {
   path: 'proceso',
   component: ProcessesComponent,
   children: [
-    VINCULACION_INTEGRACION_ROUTE
+    VINCULACION_INTEGRACION_ROUTE,
+    {
+      path: '',
+      redirectTo: '3',
+      pathMatch: 'full',
+    }
   ],
+
   data: {
     authorities: [],
     pageTitle: 'home.title'

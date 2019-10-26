@@ -1,5 +1,6 @@
 import { Component, OnInit, TemplateRef, ViewChild, Input } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { PlatformLocation } from '@angular/common';
 
 @Component({
   selector: 'jhi-tpl-caja-herramientas',
@@ -13,12 +14,16 @@ export class TplCajaHerramientasComponent implements OnInit {
   @Input() processNumber = 1;
   @Input() titleFirstColumn = 'Placeholder';
   @Input() titleSecondColumn = 'Placeholder';
-  @Input() titleProcess = 'Placeholder';
+  @Input() titleProcess = '';
+  @Input() titleModal ? = 'Caja de herramientas';
   @Input() positionTitleProcess = 'center'; // Center - right - left
+  @Input() hideToolBoxIcon ? = false;
+  modalReference: any;
 
   public processClasses: any;
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private location: PlatformLocation) {
+  }
 
   ngOnInit() {
     // En un objeto, asigna las clases que usará,
@@ -76,7 +81,13 @@ export class TplCajaHerramientasComponent implements OnInit {
   }
 
   open() {
-    this.modalService.open(this.modalCajaHerramientas, { windowClass: 'toolbox' });
+    if (this.elementsCajaHerramientas.second) {
+      this.modalReference =  this.modalService.open(this.modalCajaHerramientas, { windowClass: 'toolbox' });
+    } else {
+      this.modalReference =  this.modalService.open(this.modalCajaHerramientas, { windowClass: 'toolbox-sm' });
+    }
+     // Closes modal when back button is clicked
+    this.location.onPopState( () => this.modalReference.close());
   }
 
 }

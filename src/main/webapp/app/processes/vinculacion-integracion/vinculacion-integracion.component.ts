@@ -13,9 +13,9 @@ export class VinculacionIntegracionComponent implements OnInit, OnDestroy {
       {
         subtitle: '',
         items: [
-          { title: 'Descripción de cargo', url: 'https://github.com' },
-          { title: 'Ficha de selección', url: 'https://github.com' },
-          { title: 'Formato de entrevista', url: 'https://github.com' },
+          { title: 'Descripción de cargo', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
+          { title: 'Ficha de selección', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
+          { title: 'Formato de entrevista', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
         ]
       }
     ],
@@ -23,9 +23,9 @@ export class VinculacionIntegracionComponent implements OnInit, OnDestroy {
       {
         subtitle: '',
         items: [
-          { title: 'Matriz de entrenamiento', url: 'https://github.com' },
-          { title: 'Verificación del proceso', url: 'https://github.com' },
-          { title: 'Encuesta de satisfacción', url: 'https://github.com' },
+          { title: 'Matriz de entrenamiento', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
+          { title: 'Verificación del proceso', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
+          { title: 'Encuesta de satisfacción', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
         ]
       }
     ]
