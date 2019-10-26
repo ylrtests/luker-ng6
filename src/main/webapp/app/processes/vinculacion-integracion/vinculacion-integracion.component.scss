@@ -2,13 +2,13 @@
 @import "src/main/webapp/content/scss/custom-variables";
 
 #vinculacion .hero.process-hero {
-  background-image: url("/content/images/process-hero.jpg");
+  background-image: url("/content/images/heroes/process3-hero.jpg");
 
-  @include tablet {
+  @include md-screen {
     height: 55vh;
     max-height: 415px;
   }
-  @include desktop {
+  @include lg-screen {
     justify-content: initial;
   }
 
@@ -22,7 +22,7 @@
       text-shadow: 6px 5px 9px rgba(10, 10, 10, 0.77);
       font-size: 2rem;
       font-weight: 900;
-      @include desktop {
+      @include lg-screen {
         font-size: 3.2rem;
       }
     }
@@ -31,11 +31,11 @@
       height: 75%;
       max-width: 438px;
       max-height: 438px;
-      @include tablet {
+      @include md-screen {
         height: 85%;
         position: absolute;
       }
-      @include desktop {
+      @include lg-screen {
         height: 115%;
         margin-left: auto;
         margin-right: auto;
@@ -51,7 +51,7 @@
     align-items: center;
     height: 100%;
     position: relative;
-    @include desktop {
+    @include lg-screen {
       flex-grow: 1;
     }
 
@@ -63,7 +63,7 @@
     .title-process {
       z-index: 2;
       width: 100%;
-      @include tablet {
+      @include md-screen {
         bottom: -45px;
         position: absolute;
       }
@@ -80,7 +80,7 @@
       h2:last-child {
         color: color(third-light);
         float: right;
-        @include desktop {
+        @include lg-screen {
           margin-left: 15%;
           float: none;
         }
@@ -92,7 +92,6 @@
 #vinculacion .process-bottom {
   background-color: #fff;
   flex-grow: 1;
-  max-height: 455px;
   position: relative;
 
   .text-process {
@@ -136,7 +135,7 @@
     flex-flow: column nowrap;
     margin: 0 auto 10px;
 
-    @include tablet {
+    @include md-screen {
       flex-flow: row nowrap;
       margin: 0 0 10px 0;
     }

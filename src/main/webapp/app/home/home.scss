@@ -14,7 +14,7 @@ Main page styles
   background-image: url("/content/images/home/home-hero.jpg");
   justify-content: center;
   height: 90vh;
-  @include desktop {
+  @include lg-screen {
     height: 60vh;
   }
 
@@ -30,7 +30,7 @@ Main page styles
       font-weight: 900;
     }
     button {
-      @include tablet {
+      @include md-screen {
         position: absolute;
         right: 15%;
       }
@@ -41,10 +41,10 @@ Main page styles
     height: 50%;
     margin-top: 0.625rem;
     margin-right: 0.625rem;
-    @include tablet {
+    @include md-screen {
       height: 70%;
     }
-    @include desktop {
+    @include lg-screen {
       height: 95%;
     }
   }
@@ -52,7 +52,7 @@ Main page styles
 
 .home-bottom {
   flex-grow: 1;
-  @include tablet {
+  @include md-screen {
     max-height: 300px;
   }
 

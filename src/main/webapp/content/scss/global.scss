@@ -246,8 +246,12 @@ ui bootstrap tweaks
   flex-flow: column;
   margin: -20px auto 0;
   min-height: calc(100vh - 45px);
-  max-width: 1115px;
   background-color: #808080;
+
+  @include xl-screen {
+    padding: 0 8%;
+    max-width: 1580px;
+  }
 
   .hero {
     position: relative;
@@ -392,7 +396,7 @@ ui bootstrap tweaks
 
 // Estilos caja de herramientas
 .toolbox .modal-dialog {
-  @include tablet {
+  @include md-screen {
     max-width: 700px;
   }
   .modal-content {
