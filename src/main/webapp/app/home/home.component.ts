@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
     ngAfterViewInit() {
         this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#808080';
+        this.elementRef.nativeElement.ownerDocument.body.style.fontFamily = 'Hermes';
         this.elementRef.nativeElement.ownerDocument.querySelector('.jh-card').style.padding = '0';
     }
 

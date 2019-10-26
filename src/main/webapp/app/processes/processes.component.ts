@@ -17,6 +17,7 @@ export class ProcessesComponent implements  OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     // Añade fondo color #808080 a los elementos dentro de este modulo procesos y elimina padding a la clase jh-card usada en la plataforma
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#808080';
+    this.elementRef.nativeElement.ownerDocument.body.style.fontFamily = 'Hermes';
     this.elementRef.nativeElement.ownerDocument.querySelector('.jh-card').style.padding = '0';
   }
 
