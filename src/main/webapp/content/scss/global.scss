@@ -271,7 +271,7 @@ ui bootstrap tweaks
 
   @include xl-screen {
     padding: 0 8%;
-    max-width: 1580px;
+    max-width: 1800px;
   }
 
   .hero {
@@ -281,7 +281,7 @@ ui bootstrap tweaks
     flex-flow: row wrap;
     background-size: cover;
     width: 100%;
-    max-height: 535px;
+    max-height: 645px;
     border-bottom: 4px solid #fff;
   }
 }
@@ -300,6 +300,7 @@ ui bootstrap tweaks
   width: -moz-fit-content;
   width: intrinsic;
   width: fit-content;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
 
   .btn-badge {
     position: absolute;
@@ -331,8 +332,8 @@ ui bootstrap tweaks
 
   &:hover {
     color: #fff !important;
-    font-weight: bold !important;
     transform: scale(1.1);
+    font-weight: initial;
     box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
   }
 }

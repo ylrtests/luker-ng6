@@ -1,4 +1,4 @@
-<div class="brand-container" id="vinculacion">
+<div class="brand-container" id="vincint">
     <div class="row">
         <div class="col-12">
             <div class="hero process-hero">
@@ -9,7 +9,7 @@
                     </div>
                 </div>
                 <div class="buttons-top">
-                    <a class="btn btn-brand bg-3 filled">
+                    <a class="btn btn-brand bg-3 filled" routerLink="./vinculacion">
                         <span class="font-weight-bold">Vinculación</span>
                         <span class="btn-badge"><img src="/content/icons/shakehand.svg" alt=""
                                 class="icon third"></span>
@@ -58,11 +58,8 @@
 </div>
 
 <!-- Modal Caja de Herramientas -->
-<jhi-tpl-caja-herramientas #cajaHerramientasModal
-[processNumber] = "3" 
-[elementsCajaHerramientas]="elementsCajaHerramientas"
-[titleFirstColumn] = "'Formatos\npara descargar'"
-[titleSecondColumn] = "'Formatos\npara descargar'"
-[titleProcess] = "'Vinculación e integración'"
-[positionTitleProcess] = "'center'">
+<jhi-tpl-caja-herramientas #cajaHerramientasModal [processNumber]="3"
+    [elementsCajaHerramientas]="elementsCajaHerramientas" [titleFirstColumn]="'Formatos\npara descargar'"
+    [titleSecondColumn]="'Formatos\npara descargar'" [titleProcess]="'Vinculación e integración'"
+    [positionTitleProcess]="'center'">
 </jhi-tpl-caja-herramientas>

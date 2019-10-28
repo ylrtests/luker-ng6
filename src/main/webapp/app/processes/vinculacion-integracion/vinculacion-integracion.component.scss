@@ -1,7 +1,7 @@
 @import "src/main/webapp/content/scss/custom-functions";
 @import "src/main/webapp/content/scss/custom-variables";
 
-#vinculacion .hero.process-hero {
+#vincint .hero.process-hero {
   background-image: url("/content/images/heroes/process3-hero.jpg");
 
   @include md-screen {
@@ -14,8 +14,11 @@
 
   div:first-child {
     position: relative;
-    margin: 0.625rem 0 0 2%;
+    margin: 0.625rem 0 0 1%;
     text-align: center;
+    @include lg-screen{
+      width: 44%;
+    }
     h1 {
       color: #fff;
       text-transform: uppercase;
@@ -89,7 +92,7 @@
   }
 }
 
-#vinculacion .process-bottom {
+#vincint .process-bottom {
   background-color: #fff;
   flex-grow: 1;
   position: relative;
