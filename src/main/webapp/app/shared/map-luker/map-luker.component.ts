@@ -5,8 +5,7 @@ import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'jhi-map-luker',
-  templateUrl: './map-luker.component.html',
-  styleUrls: ['./map-luker.component.scss']
+  templateUrl: './map-luker.component.html'
 })
 export class MapLukerComponent implements OnInit, AfterViewInit {
 
@@ -55,7 +54,7 @@ export class MapLukerComponent implements OnInit, AfterViewInit {
           // Existe elemento activo
           if (this.activeElement > 0) {
             if ((this.activeElement - 1) === i) {
-              this.mapElements[i].classList.add('active');
+              // this.mapElements[i].classList.add('active');
             } else {
               this.mapElements[i].classList.add('opaque');
             }

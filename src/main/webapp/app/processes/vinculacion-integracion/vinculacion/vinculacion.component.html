@@ -2,12 +2,16 @@
     <div class="row">
         <div class="col-12">
             <div class="hero">
-                <div class="col-md-4">
-                    <div class="map-container">
-                        <jhi-map-luker [activeElement]="3"></jhi-map-luker>
+                <div class="col-md-6">
+                    <div class="row no-gutters h-100">
+                        <div class="col-md-8">
+                            <div class="map-container">
+                                <jhi-map-luker [activeElement]="3"></jhi-map-luker>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-none d-sm-block"></div>
                     </div>
                 </div>
-                <div class="col-md-2"></div>
                 <div class="col-md-6">
                     <h1 class="font-brand">Vinculación</h1>
                     <div class="buttons-top">
@@ -17,7 +21,7 @@
                             <span class="btn-badge pos-br"><img src="/content/icons/shakehand.svg" alt=""
                                     class="icon third"></span>
                         </a>
-                        <a class="btn btn-brand bg-3 filled">
+                        <a class="btn btn-brand bg-3 filled" (click)="documentosModal.open()">
                             <span class="font-weight-bold">Documentos</span>
                             <span class="btn-badge pos-tr"><img src="/content/icons/group-meet.svg" alt=""
                                     class="icon third"></span>
@@ -46,3 +50,10 @@
         </div>
     </div>
 </div>
+
+
+<!-- Modal Documentos -->
+<jhi-tpl-caja-herramientas #documentosModal [processNumber]="3"
+    [titleModal] = "'Documentos'" [elementsCajaHerramientas]="elementsModal" [titleFirstColumn]="'Consulta\naquí'"
+    [hideToolBoxIcon] = "true">
+</jhi-tpl-caja-herramientas>

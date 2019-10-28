@@ -22,8 +22,9 @@
     text-shadow: 6px 5px 9px rgba(10, 10, 10, 0.77);
     font-weight: 900;
     text-align: center;
-    margin: 1rem 0 3.5rem;;
+    margin: 1rem 0 3.5rem;
     font-size: 3rem;
+    white-space: pre;
   }
 
   .buttons-top {
@@ -69,7 +70,7 @@
         top: 110%;
         font-size: 0.9rem;
         max-width: 80%;
-        pointer-events:none;
+        pointer-events: none;
       }
     }
 
@@ -81,34 +82,7 @@
         text-transform: uppercase;
         font-family: $font-brand-secondary;
         top: -2rem;
-        pointer-events:none;
-      }
-    }
-
-    .title-process {
-      z-index: 2;
-      width: 100%;
-      @include md-screen {
-        bottom: -45px;
-        position: absolute;
-      }
-      h2 {
-        font-size: 2.3rem;
-        text-transform: uppercase;
-        font-weight: 900;
-        margin-bottom: 0;
-      }
-      h2:first-child {
-        color: #fff;
-        text-shadow: 6px 5px 9px rgba(10, 10, 10, 0.4);
-      }
-      h2:last-child {
-        color: color(third-light);
-        float: right;
-        @include lg-screen {
-          margin-left: 15%;
-          float: none;
-        }
+        pointer-events: none;
       }
     }
   }
@@ -118,10 +92,11 @@
     height: 75%;
     max-width: 375px;
     max-height: 375px;
+    text-align: center;
+    margin: 0 auto;
     @include md-screen {
       position: absolute;
-      text-align: center;
-      height: 60%;
+      height: 66%;
       bottom: -3rem;
       left: 50%;
       transform: translateX(-50%);
