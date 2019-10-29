@@ -81,6 +81,7 @@
       padding: 15px 15px 0;
       flex-grow: 1;
       max-width: 400px;
+      width: 50%;
       white-space: pre-line;
       h2 {
         font-size: 1.2rem;
@@ -138,6 +139,13 @@
         &:last-of-type{
           margin-bottom: 0;
         }
+      }
+    }
+
+    &.second{
+      margin-bottom: 2.5rem;
+      &:last-of-type{
+        margin-bottom: 0;
       }
     }
   }

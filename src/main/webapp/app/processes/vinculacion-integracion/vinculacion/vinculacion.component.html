@@ -21,14 +21,6 @@
                             <span class="btn-badge pos-br"><img src="/content/icons/shakehand.svg" alt=""
                                     class="icon third"></span>
                         </a>
-                        <a class="btn btn-brand bg-3 filled" (click)="documentosModal.open()">
-                            <span class="font-weight-bold">Documentos</span>
-                            <span class="btn-badge pos-tr"><img src="/content/icons/group-meet.svg" alt=""
-                                    class="icon third"></span>
-                            <div class="text-button">
-                                Consulta aquí
-                            </div>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -50,10 +42,3 @@
         </div>
     </div>
 </div>
-
-
-<!-- Modal Documentos -->
-<jhi-tpl-caja-herramientas #documentosModal [processNumber]="3"
-    [titleModal] = "'Documentos'" [elementsCajaHerramientas]="elementsModal" [titleFirstColumn]="'Consulta\naquí'"
-    [hideToolBoxIcon] = "true">
-</jhi-tpl-caja-herramientas>

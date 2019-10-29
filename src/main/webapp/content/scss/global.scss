@@ -9,20 +9,23 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit:400,800&display=swap");
 @font-face {
   font-family: "Hermes";
-  src: url("../fonts/hermes-regular-webfont.woff2") format("woff2"), url("../fonts/hermes-regular-webfont.woff") format("woff");
+  src: url("../fonts/hermes-regular-webfont.woff2") format("woff2"),
+    url("../fonts/hermes-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Hermes";
-  src: url("../fonts/hermes-bold-webfont.woff2") format("woff2"), url("../fonts/hermes-bold-webfont.woff") format("woff");
+  src: url("../fonts/hermes-bold-webfont.woff2") format("woff2"),
+    url("../fonts/hermes-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Hermes";
-  src: url("../fonts/hermes-thin-webfont.woff2") format("woff2"), url("../fonts/hermes-thin-webfont.woff") format("woff");
+  src: url("../fonts/hermes-thin-webfont.woff2") format("woff2"),
+    url("../fonts/hermes-thin-webfont.woff") format("woff");
   font-weight: 100;
   font-style: normal;
 }
@@ -328,6 +331,13 @@ ui bootstrap tweaks
       left: -5px;
       top: -30px;
     }
+  }
+
+  img.right-arrow {
+    margin-top: -0.45rem;
+    margin-left: 0.5rem;
+    height: 0.65rem;
+    filter: colorFilter(white);
   }
 
   &:hover {

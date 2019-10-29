@@ -8,8 +8,8 @@
 
   @include md-screen {
     height: 70vh;
-    background-size: contain;
-    background-position-x: 50%;
+    background-size: cover;
+    background-position: center;
     padding-bottom: 0;
   }
   @include lg-screen {
@@ -75,7 +75,7 @@
     }
 
     .btn-brand:first-child {
-      margin-right: 4.5rem;
+      // margin-right: 4.5rem;
       &:before {
         content: "solicitudes";
         position: absolute;

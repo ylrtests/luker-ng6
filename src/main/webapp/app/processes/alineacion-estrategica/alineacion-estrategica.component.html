@@ -1,0 +1,65 @@
+<div class="brand-container" id="alieneacionEstr">
+    <div class="row">
+        <div class="col-12">
+            <div class="hero process-hero">
+                <div>
+                    <h1 class="font-brand">Talento & gestión</h1>
+                    <div class="map-container">
+                        <jhi-map-luker [activeElement]="1"></jhi-map-luker>
+                    </div>
+                </div>
+                <div class="buttons-top">
+                    <a class="btn btn-brand bg-1 filled" routerLink="./vinculacion">
+                        <span class="font-weight-bold">Definición<br>estratégica</span>
+                        <span class="btn-badge"><img src="/content/icons/shakehand.svg" alt=""
+                                class="icon first"></span>
+                    </a>
+                    <a class="btn btn-brand bg-1 filled">
+                        <span class="font-weight-bold">Sps 2019</span>
+                        <span class="btn-badge"><img src="/content/icons/group-meet.svg" alt=""
+                                class="icon first"></span>
+                    </a>
+                    <!-- <div class="title-process">
+                      <h2 class="font-brand">Vinculación</h2>
+                      <h2 class="font-brand">E Integración</h2>
+                  </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row no-gutters process-bottom">
+        <div class="col-lg-5"></div>
+        <div class="col-lg-7">
+            <h2 class="font-brand">Alineación estratégica</h2>
+            <div class="text-process">
+                <div>
+                    Generamos <span class="font-weight-bold">claridad y alineación</span> con la razón de ser, los <span
+                        class="font-weight-bold">objetivos estratégicos y la cultura de la
+                        organización.</span>
+                </div>
+            </div>
+            <div class="buttons-bottom">
+                <div>
+                    <h3>Conoce</h3>
+                    <h3>Más</h3>
+                </div>
+                <a class="btn btn-brand bg-1 dark" (click)="cajaHerramientasModal.open()">
+                    <span class="font-weight-bold">Caja de herramientas <img class="right-arrow" src="/content/icons/right-arrow.svg"></span>
+                    <span class="btn-badge"><img src="/content/icons/tool.svg" alt="" class="icon first"></span>
+                </a>
+                <a class="btn btn-brand bg-1 dark" routerLink="./definiciones">
+                    <span class="font-weight-bold">Definiciones <img class="right-arrow" src="/content/icons/right-arrow.svg"></span>
+                    <span class="btn-badge"><img src="/content/icons/group-cycle.svg" alt="" class="icon first"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Caja de Herramientas -->
+<jhi-tpl-caja-herramientas #cajaHerramientasModal [processNumber]="1"
+    [elementsCajaHerramientas]="elementsCajaHerramientas" [titleFirstColumn]="'Formatos\npara descargar'"
+    [titleSecondColumn]="'Consulta\naqui'" [titleProcess]="'Alineación estratégica'"
+    [positionTitleProcess]="'left'">
+</jhi-tpl-caja-herramientas>
