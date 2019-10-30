@@ -106,7 +106,7 @@
         }
       }
 
-      &:nth-last-child(2){
+      &:nth-last-child(2) {
         min-width: 50%;
       }
     }
@@ -136,15 +136,15 @@
         display: block;
         width: 90%;
         margin-bottom: 0.7rem;
-        &:last-of-type{
+        &:last-of-type {
           margin-bottom: 0;
         }
       }
     }
 
-    &.second{
+    &.second {
       margin-bottom: 2.5rem;
-      &:last-of-type{
+      &:last-of-type {
         margin-bottom: 0;
       }
     }
