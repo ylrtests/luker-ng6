@@ -3,6 +3,7 @@ import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager } from 'ng-jhipster';
 
 import { LoginModalService, Principal, Account } from 'app/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'jhi-home',
@@ -18,7 +19,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         private loginModalService: LoginModalService,
         private eventManager: JhiEventManager,
         private elementRef: ElementRef,
-        private renderer2: Renderer2) { }
+        private renderer2: Renderer2,
+        private router: Router) { }
 
     ngOnInit() {
         this.principal.identity().then(account => {
@@ -51,6 +53,14 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         // En producción se usa el código comentado o el código implementado.
         return true;
         // return this.principal.isAuthenticated();
+    }
+
+    goLink(url: string) {
+        if (this.isAuthenticated()) {
+            this.router.navigate([url]);
+        } else {
+            this.login();
+        }
     }
 
     login() {

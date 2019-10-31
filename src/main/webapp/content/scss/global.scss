@@ -297,7 +297,7 @@ ui bootstrap tweaks
   background: color(primary);
   border-radius: 10px;
   position: relative;
-  color: #fff !important;
+  color: #fff;
   transition: all 0.3s ease 0s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -341,7 +341,7 @@ ui bootstrap tweaks
   }
 
   &:hover {
-    color: #fff !important;
+    color: #fff;
     transform: scale(1.1);
     font-weight: initial;
     box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
@@ -364,10 +364,6 @@ ui bootstrap tweaks
     text-decoration: none;
     font-weight: 400;
   }
-}
-
-.text-brand {
-  color: color(primary) !important;
 }
 
 .icon {
@@ -448,6 +444,9 @@ ui bootstrap tweaks
 // Clases de colores  y fondos para los procesos
 
 // Empieza colores
+.text-brand {
+  color: color(primary) !important;
+}
 .color-1 {
   color: color(first);
   &.light {
@@ -503,6 +502,9 @@ ui bootstrap tweaks
   }
 } // Fin colores
 // Fondos
+.bg-brand {
+  background-color: color(primary);
+}
 .bg-1 {
   background-color: color(first);
   &.light {
