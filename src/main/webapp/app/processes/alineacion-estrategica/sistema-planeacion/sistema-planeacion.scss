@@ -2,12 +2,19 @@
 @import "src/main/webapp/content/scss/custom-variables";
 
 #sps .hero {
-  background-image: url("/content/images/heroes/sps-hero.jpg");
+  background-image: linear-gradient(
+    90deg,
+    rgba(128, 128, 128, 1) 0%,
+    rgba(181, 177, 177, 1) 35%,
+    rgba(158, 161, 162, 1) 100%
+  );
   background-position-x: 20%;
   border-bottom: none;
   padding-bottom: 3rem;
 
   @include md-screen {
+    background-image: url("/content/images/heroes/sps-hero.jpg"),
+      linear-gradient(90deg, rgba(128, 128, 128, 1) 0%, rgba(181, 177, 177, 1) 35%, rgba(158, 161, 162, 1) 100%);
     height: 65vh;
     background-size: cover;
     background-position-x: 40%;

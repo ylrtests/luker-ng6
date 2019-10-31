@@ -2,10 +2,16 @@
 @import "src/main/webapp/content/scss/custom-variables";
 
 #definiciones .hero.definicion-hero {
-  background-image: url("/content/images/definicion-hero.jpg");
+  background-image: linear-gradient(
+    90deg,
+    rgba(128, 128, 128, 1) 0%,
+    rgba(181, 177, 177, 1) 35%,
+    rgba(158, 161, 162, 1) 100%
+  );
   border-bottom: none;
-
   @include md-screen {
+    background-image: url("/content/images/definicion-hero.jpg"),
+      linear-gradient(90deg, rgba(128, 128, 128, 1) 0%, rgba(181, 177, 177, 1) 35%, rgba(158, 161, 162, 1) 100%);
     height: 45vh;
     max-height: 350px;
     align-items: center;
