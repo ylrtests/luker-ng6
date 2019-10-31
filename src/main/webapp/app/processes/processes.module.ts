@@ -18,6 +18,10 @@ import { PlaneacionEstructuraComponent } from './planeacion-estructura/planeacio
 import { DefPlaneacionEstructuraComponent } from './planeacion-estructura/definiciones/def-planeacion-estructura.component';
 import { DesemDesarrolloComponent } from './desem-desarrollo/desem-desarrollo.component';
 import { DefDesemDesarrolloComponent } from './desem-desarrollo/definiciones/def-desem-desarrollo.component';
+import { CompromisoReconoComponent } from './compromiso-recono/compromiso-recono.component';
+import { DefCompromisoReconoComponent } from './compromiso-recono/definiciones/def-compromiso-recono.component';
+import { CierreExitosoComponent } from './cierre-exitoso/cierre-exitoso.component';
+import { DefCierreExitosoComponent } from './cierre-exitoso/definiciones/def-cierre-exitoso.component';
 
 @NgModule({
     imports: [LukerSharedModule, RouterModule.forChild([PROCESSES_ROUTE])],
@@ -36,6 +40,10 @@ import { DefDesemDesarrolloComponent } from './desem-desarrollo/definiciones/def
         DefPlaneacionEstructuraComponent,
         DesemDesarrolloComponent,
         DefDesemDesarrolloComponent,
+        CompromisoReconoComponent,
+        DefCompromisoReconoComponent,
+        CierreExitosoComponent,
+        DefCierreExitosoComponent
     ]
 })
 export class LukerProcessesModule { }

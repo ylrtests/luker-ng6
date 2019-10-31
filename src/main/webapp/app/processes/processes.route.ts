@@ -3,6 +3,8 @@ import { VINCULACION_INTEGRACION_ROUTE } from './vinculacion-integracion/vincula
 import { ALINEACION_ESTRATEGICA_ROUTE } from './alineacion-estrategica/alineacion-estrategica.route';
 import { PLANEACION_ESTRUCTURA_ROUTE } from './planeacion-estructura/planeacion-estructura.route';
 import { DESEM_DESARROLLO_ROUTE } from './desem-desarrollo/desem-desarrollo.route';
+import { COMPROMISO_RECONO_ROUTE } from './compromiso-recono/compromiso-recono.route';
+import { CIERRE_EXITOSO_ROUTE } from './cierre-exitoso/cierre-exitoso.route';
 import { ProcessesComponent } from './processes.component';
 
 export const PROCESSES_ROUTE: Route = {
@@ -13,6 +15,8 @@ export const PROCESSES_ROUTE: Route = {
     VINCULACION_INTEGRACION_ROUTE,
     PLANEACION_ESTRUCTURA_ROUTE,
     DESEM_DESARROLLO_ROUTE,
+    COMPROMISO_RECONO_ROUTE,
+    CIERRE_EXITOSO_ROUTE,
     {
       path: '',
       redirectTo: '3',
