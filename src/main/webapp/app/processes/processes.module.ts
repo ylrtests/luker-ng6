@@ -16,6 +16,8 @@ import { DefAlineacionEstrategicaComponent } from './alineacion-estrategica/defi
 import { SistemaPlaneacionComponent } from './alineacion-estrategica/sistema-planeacion/sistema-planeacion.component';
 import { PlaneacionEstructuraComponent } from './planeacion-estructura/planeacion-estructura.component';
 import { DefPlaneacionEstructuraComponent } from './planeacion-estructura/definiciones/def-planeacion-estructura.component';
+import { DesemDesarrolloComponent } from './desem-desarrollo/desem-desarrollo.component';
+import { DefDesemDesarrolloComponent } from './desem-desarrollo/definiciones/def-desem-desarrollo.component';
 
 @NgModule({
     imports: [LukerSharedModule, RouterModule.forChild([PROCESSES_ROUTE])],
@@ -32,6 +34,8 @@ import { DefPlaneacionEstructuraComponent } from './planeacion-estructura/defini
         SistemaPlaneacionComponent,
         PlaneacionEstructuraComponent,
         DefPlaneacionEstructuraComponent,
+        DesemDesarrolloComponent,
+        DefDesemDesarrolloComponent,
     ]
 })
 export class LukerProcessesModule { }
