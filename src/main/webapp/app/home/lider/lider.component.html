@@ -3,10 +3,9 @@
     <div class="col-12">
       <div class="hero definicion-hero">
         <div>
-          <a class="btn btn-brand light" id="btn-regresar" [ngClass]="processClasses.bg" href="javascript:void(0)"
-            (click)="goBack()">
+          <button class="btn btn-brand light" id="btn-regresar" [ngClass]="processClasses.bg" (click)="goBack()">
             Regresar <img src="/content/icons/back-button.png" alt="">
-          </a>
+          </button>
           <div class="btn btn-brand light static" [ngClass]="processClasses.bg">
             <span class="font-weight-bold font-brand">Líder</span>
             <span class="btn-badge"><img src="/content/icons/group-cycle.svg" alt="" class="icon"
@@ -49,11 +48,11 @@
         </div>
         <img class="lamp" src="/content/images/home/lamp.png"></span>
         <ul class="list text-justify">
-          <ng-container *ngTemplateOutlet ="defaultListProcesos"></ng-container>
+          <ng-container *ngTemplateOutlet="defaultListProcesos"></ng-container>
         </ul>
       </div>
       <div class="item">
-          <img class="img-lider" src="/content/images/home/lider-img.png"></span>
+        <img class="img-lider" src="/content/images/home/lider-img.png"></span>
       </div>
     </div>
   </div>
