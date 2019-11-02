@@ -17,6 +17,7 @@ import { SistemaPlaneacionComponent } from './alineacion-estrategica/sistema-pla
 import { PlaneacionEstructuraComponent } from './planeacion-estructura/planeacion-estructura.component';
 import { DefPlaneacionEstructuraComponent } from './planeacion-estructura/definiciones/def-planeacion-estructura.component';
 import { DesemDesarrolloComponent } from './desem-desarrollo/desem-desarrollo.component';
+import { UniversidadLukerComponent } from './desem-desarrollo/universidad-luker/universidad-luker.component';
 import { DefDesemDesarrolloComponent } from './desem-desarrollo/definiciones/def-desem-desarrollo.component';
 import { CompromisoReconoComponent } from './compromiso-recono/compromiso-recono.component';
 import { DefCompromisoReconoComponent } from './compromiso-recono/definiciones/def-compromiso-recono.component';
@@ -39,6 +40,7 @@ import { DefCierreExitosoComponent } from './cierre-exitoso/definiciones/def-cie
         PlaneacionEstructuraComponent,
         DefPlaneacionEstructuraComponent,
         DesemDesarrolloComponent,
+        UniversidadLukerComponent,
         DefDesemDesarrolloComponent,
         CompromisoReconoComponent,
         DefCompromisoReconoComponent,
