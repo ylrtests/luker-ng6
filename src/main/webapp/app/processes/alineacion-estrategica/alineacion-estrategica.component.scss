@@ -184,3 +184,32 @@
     }
   }
 }
+
+// Estilos del modal definición estratégica
+.modal-header {
+  padding: 0;
+  flex-flow: column nowrap;
+  border-bottom: 0;
+  .header-top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: color(primary);
+    height: 35px;
+    margin-bottom: 0.5rem;
+
+    img {
+      height: 65%;
+      width: 25px;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.img-def {
+  height: auto;
+  width: 100%;
+}

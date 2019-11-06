@@ -23,6 +23,7 @@ import { CompromisoReconoComponent } from './compromiso-recono/compromiso-recono
 import { DefCompromisoReconoComponent } from './compromiso-recono/definiciones/def-compromiso-recono.component';
 import { CierreExitosoComponent } from './cierre-exitoso/cierre-exitoso.component';
 import { DefCierreExitosoComponent } from './cierre-exitoso/definiciones/def-cierre-exitoso.component';
+import { TplContactoComponent } from './templates/tpl-contacto/tpl-contacto.component';
 
 @NgModule({
     imports: [LukerSharedModule, RouterModule.forChild([PROCESSES_ROUTE])],
@@ -45,7 +46,8 @@ import { DefCierreExitosoComponent } from './cierre-exitoso/definiciones/def-cie
         CompromisoReconoComponent,
         DefCompromisoReconoComponent,
         CierreExitosoComponent,
-        DefCierreExitosoComponent
+        DefCierreExitosoComponent,
+        TplContactoComponent
     ]
 })
 export class LukerProcessesModule { }

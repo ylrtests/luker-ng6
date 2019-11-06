@@ -30,6 +30,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Cheddar Jack';
+  src: url('../fonts/CheddarJack.woff2') format('woff2'),
+      url('../fonts/CheddarJack.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* ==============================================================
 Bootstrap tweaks
 ===============================================================*/
@@ -284,8 +292,10 @@ ui bootstrap tweaks
     flex-flow: row wrap;
     background-size: cover;
     width: 100%;
-    max-height: 645px;
     border-bottom: 4px solid #fff;
+    @include lg-screen{
+      max-height: 645px;
+    }
   }
 }
 
@@ -388,6 +398,9 @@ ui bootstrap tweaks
   &.sixth {
     filter: colorFilter(sixth);
   }
+  &.white{
+    filter: colorFilter(white);
+  }
 }
 
 .carousel-item {
@@ -435,6 +448,16 @@ ui bootstrap tweaks
 .toolbox-sm .modal-dialog {
   @include md-screen {
     max-width: 470px;
+  }
+  .modal-content {
+    border: none;
+  }
+}
+
+// Estilo modal definicion estratégica
+.modal-def .modal-dialog{
+  @include md-screen {
+    max-width: 800px;
   }
   .modal-content {
     border: none;

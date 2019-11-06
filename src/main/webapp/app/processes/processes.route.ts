@@ -6,6 +6,7 @@ import { DESEM_DESARROLLO_ROUTE } from './desem-desarrollo/desem-desarrollo.rout
 import { COMPROMISO_RECONO_ROUTE } from './compromiso-recono/compromiso-recono.route';
 import { CIERRE_EXITOSO_ROUTE } from './cierre-exitoso/cierre-exitoso.route';
 import { ProcessesComponent } from './processes.component';
+import { TplContactoComponent } from './templates/tpl-contacto/tpl-contacto.component';
 
 export const PROCESSES_ROUTE: Route = {
   path: 'proceso',
@@ -17,6 +18,14 @@ export const PROCESSES_ROUTE: Route = {
     DESEM_DESARROLLO_ROUTE,
     COMPROMISO_RECONO_ROUTE,
     CIERRE_EXITOSO_ROUTE,
+    {
+      path: 'contacto',
+      component: TplContactoComponent,
+      pathMatch: 'full',
+      data: {
+        pageTitle: 'home.contact'
+      }
+    },
     {
       path: '',
       redirectTo: '3',

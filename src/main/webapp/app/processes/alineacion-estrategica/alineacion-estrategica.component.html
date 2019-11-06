@@ -9,11 +9,11 @@
                     </div>
                 </div>
                 <div class="buttons-top">
-                    <a class="btn btn-brand bg-1 filled" routerLink="./vinculacion">
+                    <button class="btn btn-brand bg-1 filled" (click)="openDefinicionEstrategica(modalDefinicion)">
                         <span class="font-weight-bold">Definición<br>estratégica</span>
                         <span class="btn-badge"><img src="/content/icons/figure-circle.svg" alt=""
                                 class="icon first"></span>
-                    </a>
+                    </button>
                     <a class="btn btn-brand bg-1 filled" routerLink="./sps">
                         <span class="font-weight-bold">Sps 2019</span>
                         <span class="btn-badge"><img src="/content/icons/figure-flag.svg" alt=""
@@ -41,11 +41,13 @@
                     <h3>Más</h3>
                 </div>
                 <button class="btn btn-brand bg-1 dark" (click)="cajaHerramientasModal.open()">
-                    <span class="font-weight-bold">Caja de herramientas <img class="right-arrow" src="/content/icons/right-arrow.svg"></span>
+                    <span class="font-weight-bold">Caja de herramientas <img class="right-arrow"
+                            src="/content/icons/right-arrow.svg"></span>
                     <span class="btn-badge"><img src="/content/icons/tool.svg" alt="" class="icon first"></span>
                 </button>
                 <a class="btn btn-brand bg-1 dark" routerLink="./definiciones">
-                    <span class="font-weight-bold">Definiciones <img class="right-arrow" src="/content/icons/right-arrow.svg"></span>
+                    <span class="font-weight-bold">Definiciones <img class="right-arrow"
+                            src="/content/icons/right-arrow.svg"></span>
                     <span class="btn-badge"><img src="/content/icons/group-cycle.svg" alt="" class="icon first"></span>
                 </a>
             </div>
@@ -56,6 +58,17 @@
 <!-- Modal Caja de Herramientas -->
 <jhi-tpl-caja-herramientas #cajaHerramientasModal [processNumber]="1"
     [elementsCajaHerramientas]="elementsCajaHerramientas" [titleFirstColumn]="'Formatos\npara descargar'"
-    [titleSecondColumn]="'Consulta\naqui'" [titleProcess]="'Alineación estratégica'"
-    [positionTitleProcess]="'left'">
+    [titleSecondColumn]="'Consulta\naqui'" [titleProcess]="'Alineación estratégica'" [positionTitleProcess]="'left'">
 </jhi-tpl-caja-herramientas>
+
+<!-- Modal de Definición estratégica-->
+<ng-template #modalDefinicion let-c="close">
+    <div class="modal-header">
+        <div class="header-top">
+            <img src="/content/icons/close.png" alt="Cerrar" (click)="c('Cross click')">
+        </div>
+    </div>
+    <div class="modal-body">
+        <img class="img-def" src="/content/images/definicion-estrategica.jpg" alt="Definición estratégica">
+    </div>
+</ng-template>

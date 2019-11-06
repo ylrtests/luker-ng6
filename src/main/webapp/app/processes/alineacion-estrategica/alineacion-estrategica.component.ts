@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { TplCajaHerramientasComponent } from '../templates/tpl-caja-herramientas/tpl-caja-herramientas.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { PlatformLocation } from '@angular/common';
 
 @Component({
   selector: 'jhi-alineacion-estrategica',
@@ -47,12 +49,19 @@ export class AlineacionEstrategicaComponent implements OnInit {
       }
     ]
   };
+  modalReference: any;
 
   @ViewChild(TplCajaHerramientasComponent) cajaHerramientas: TplCajaHerramientasComponent;
 
-  constructor() { }
+  constructor(private modalService: NgbModal, private location: PlatformLocation) { }
 
   ngOnInit() {
+  }
+
+  openDefinicionEstrategica(modal) {
+    this.modalReference = this.modalService.open(modal, { windowClass: 'modal-def' });
+    // Closes modal when back button is clicked
+    this.location.onPopState(() => this.modalReference.close());
   }
 
 }
