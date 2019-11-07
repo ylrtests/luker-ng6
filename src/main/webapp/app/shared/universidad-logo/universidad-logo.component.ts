@@ -30,8 +30,8 @@ export class UniversidadLogoComponent implements OnInit, AfterViewInit {
     const intervalo = setInterval(() => {
       if (i < this.items.length) {
         if (this.opaqueElements) {
-          for (let numberOpaque of this.opaqueElements) {
-            if( i == (numberOpaque - 1)){
+          for (const numberOpaque of this.opaqueElements) {
+            if ( i === ( numberOpaque - 1 ) ) {
               this.items[i].classList.add('opaque');
               break;
             }

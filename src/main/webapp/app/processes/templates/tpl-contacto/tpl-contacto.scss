@@ -14,7 +14,7 @@
   @include md-screen {
     background-image: url("/content/images/heroes/contacto-hero.jpg"),
       linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 40%, rgba(255, 255, 255, 1) 100%);
-    min-height: 72vh;
+    height: 72vh;
   }
   @include lg-screen {
     justify-content: initial;
@@ -34,12 +34,14 @@
       display: flex;
       flex-flow: column nowrap;
       margin-bottom: 0.8rem;
+      padding-left: 0.5rem;
+      color: #808080;
       & > h2 {
         color: color(primary);
         text-transform: uppercase;
         font-weight: 700;
         margin-bottom: 0.5rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         white-space: pre;
       }
 
@@ -51,7 +53,6 @@
       }
 
       .item-details {
-        color: #808080;
         line-height: 1;
         font-size: 0.9rem;
 
@@ -79,8 +80,12 @@
 
       &:last-of-type {
         margin-bottom: 0;
+        margin-top: 2rem;
         padding-top: 0.8rem;
-        border-top: 1px solid color(primary);
+        padding-bottom: 1rem;
+        color: #fff;
+        border-radius: 10px;
+        background: rgba(225, 85, 63, 0.8);
       }
     }
   }
@@ -88,6 +93,7 @@
   .map-container {
     z-index: 2;
     height: 75%;
+    width: inherit;
     max-width: 375px;
     max-height: 375px;
     text-align: center;

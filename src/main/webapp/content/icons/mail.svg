@@ -3,7 +3,7 @@
     <style>
       .cls-1 {
         fill: none;
-        stroke: #706f6f;
+        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 1.44px;

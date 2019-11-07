@@ -10,11 +10,11 @@
                 <div class="col-md-6 offset-md-2 align-self-center">
                     <div class="list-contact">
                         <div class="wrapper">
-                            <div class="item-contact" *ngFor="let contact of contactList">
-                                <h2 class="font-brand">{{contact.title}}</h2>
+                            <div class="item-contact" *ngFor="let contact of contactList; last as isLast">
+                                <h2 class="font-brand" *ngIf="contact.title">{{contact.title}}</h2>
                                 <div class="d-flex align-items-center">
                                     <div class="img-wrapper">
-                                        <img class="icon primary"
+                                        <img class="icon" [ngClass]="{'primary': !isLast, 'white': isLast }"
                                             [attr.src]="contact.gender === 'f' ? '/content/icons/woman.svg' : '/content/icons/man.svg'"
                                             alt="" height="60px">
                                     </div>
@@ -22,7 +22,7 @@
                                         <p class="name"> {{contact.name}}</p>
                                         <h3 class="position font-brand">{{contact.position}}</h3>
                                         <p class="email">{{contact.email}} <img class="icon" height="20px"
-                                                src="/content/icons/mail.svg" alt=""></p>
+                                                src="/content/icons/mail.svg" alt="" [ngClass]="{'grey': !isLast, 'white': isLast }"></p>
                                     </div>
                                 </div>
                             </div>

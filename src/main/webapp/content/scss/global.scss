@@ -401,6 +401,9 @@ ui bootstrap tweaks
   &.white{
     filter: colorFilter(white);
   }
+  &.grey{
+    filter: colorFilter(grey);
+  }
 }
 
 .carousel-item {

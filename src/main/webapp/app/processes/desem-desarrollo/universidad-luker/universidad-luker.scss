@@ -25,7 +25,6 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
     .contact {
       height: 6rem;
       transition: all 0.6s;
@@ -46,6 +45,9 @@
         right: 1rem;
         bottom: 2rem;
       }
+    }
+    .btn-brand:last-of-type{
+      margin-right: 3%;
     }
   }
 }

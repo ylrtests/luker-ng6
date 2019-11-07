@@ -48,7 +48,8 @@
         <ul class="list text-justify">
           <ng-container *ngTemplateOutlet="defaultListProcesos"></ng-container>
         </ul>
-        <a *ngIf="canShowCajaHerramientas()" class="btn btn-brand" (click)="cajaHerramientasModal.open()">
+        <!-- <a *ngIf="canShowCajaHerramientas()" class="btn btn-brand" (click)="cajaHerramientasModal.open()"> -->
+        <a *ngIf="canShowCajaHerramientas()" class="btn btn-brand">
           <span class="font-weight-bold">Caja de herramientas</span>
           <span class="btn-badge"><img src="/content/icons/tool.svg" alt="" class="icon primary"></span>
         </a>
