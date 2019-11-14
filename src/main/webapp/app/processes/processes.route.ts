@@ -5,6 +5,7 @@ import { PLANEACION_ESTRUCTURA_ROUTE } from './planeacion-estructura/planeacion-
 import { DESEM_DESARROLLO_ROUTE } from './desem-desarrollo/desem-desarrollo.route';
 import { COMPROMISO_RECONO_ROUTE } from './compromiso-recono/compromiso-recono.route';
 import { CIERRE_EXITOSO_ROUTE } from './cierre-exitoso/cierre-exitoso.route';
+import { UNIVERSIDAD_LUKER_ROUTE } from './universidad-luker/universidad-luker.route';
 import { ProcessesComponent } from './processes.component';
 import { TplContactoComponent } from './templates/tpl-contacto/tpl-contacto.component';
 
@@ -18,6 +19,7 @@ export const PROCESSES_ROUTE: Route = {
     DESEM_DESARROLLO_ROUTE,
     COMPROMISO_RECONO_ROUTE,
     CIERRE_EXITOSO_ROUTE,
+    UNIVERSIDAD_LUKER_ROUTE,
     {
       path: 'contacto',
       component: TplContactoComponent,

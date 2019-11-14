@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'jhi-integracion',
@@ -41,9 +42,17 @@ export class IntegracionComponent implements OnInit {
     ]
   };
 
-  constructor() { }
+  private options: Object = {
+    op: ["3", "4"]
+  };
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  openUniversity() {
+    this.router.navigate(['/proceso/universidad'], { queryParams: this.options });
   }
 
 }
