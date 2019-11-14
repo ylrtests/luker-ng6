@@ -1,1 +1,53 @@
-<p>integracion works!</p>
+<div class="brand-container" id="integracion">
+    <div class="row no-gutters first">
+        <div id="step-one" class="col-md-6 col-lg-3 item">
+            <div class="circle">
+                <p>1</p>
+            </div>
+            <h2 class="title">Primera aproximación</h2>
+            <ul class="list">
+                <li *ngFor="let item of steps.first" [ngClass]="{'highlight': item.isHighlighted}">{{item.text}}</li>
+            </ul>
+        </div>
+        <div id="step-two" class="col-md-6 col-lg-3 item">
+            <img class="img-msg" src="/content/images/int-msg.png" alt="">
+            <ul class="list">
+                <li *ngFor="let item of steps.second" [ngClass]="{'highlight': item.isHighlighted}">{{item.text}}</li>
+            </ul>
+            <div class="circle">
+                <p>2</p>
+            </div>
+            <h2 class="title">Primer día</h2>
+        </div>
+        <div id="step-three" class="col-md-6 col-lg-3 item">
+            <div class="circle">
+                <p>3</p>
+            </div>
+            <h2 class="title">Primer mes</h2>
+            <ul class="list">
+                <li *ngFor="let item of steps.third" [ngClass]="{'highlight': item.isHighlighted}">{{item.text}}</li>
+            </ul>
+        </div>
+        <div id="step-four" class="col-md-6 col-lg-3 item">
+            <ul class="list">
+                <li *ngFor="let item of steps.fourth" [ngClass]="{'highlight': item.isHighlighted}">{{item.text}}</li>
+            </ul>
+            <div class="circle">
+                <p>4</p>
+            </div>
+            <h2 class="title">Primer trimestre</h2>
+        </div>
+    </div>
+    <div class="row no-gutters second">
+        <div class="panel">
+            <h1 class="font-brand text-brand">Proceso de<br />integración</h1>
+            <div class="btn-wrapper">
+                <a class="btn btn-brand " href="">Rol de líder</a>
+                <a class="btn btn-brand " href="">Rol de talento</a>
+                <a class="btn btn-brand " href="">Rol del aux. Bogotá</a>
+                <a class="btn btn-brand " href="">Rol del aux. Ciudades</a>
+            </div>
+        </div>
+        <img class="img-uni" src="/content/images/int-uni.png" alt="">
+    </div>
+</div>

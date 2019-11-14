@@ -1,0 +1,211 @@
+@import "src/main/webapp/content/scss/custom-functions";
+@import "src/main/webapp/content/scss/custom-variables";
+/*
+Colores
+1:  f6bd05 .7
+2:  c60b7e
+3: 0b9dda
+4: 049679
+
+titulos: 4e4d4d
+Firma contrato: 70706f
+*/
+#integracion .first {
+  background-color: #fff;
+  min-height: 66vh;
+  @include xl-screen {
+    max-height: 720px;
+    height: 66vh;
+    min-height: max-content;
+  }
+  .item {
+    padding: 1rem;
+    position: relative;
+    @include lg-screen {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: -11px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #cdcccc;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 88%;
+        right: 0;
+        top: 12%;
+        border-right: 4px solid #e6e5e5;
+      }
+      &:last-child::after,
+      &:last-child::before {
+        display: none;
+      }
+    }
+  }
+
+  .circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 3.25rem;
+      color: #fff;
+      font-weight: 900;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+  }
+
+  .title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  ul.list {
+    list-style-type: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    margin: 0;
+    padding: 0;
+
+    li {
+      border-radius: 10px;
+      padding: 0 5px;
+      margin: 5px 0;
+    }
+  }
+
+  .highlight {
+    cursor: pointer;
+  }
+
+  #step-one {
+    .circle {
+      background-color: rgba(246, 189, 5, 1);
+      margin-bottom: 1.5rem;
+    }
+    .title {
+      color: rgb(246, 189, 5);
+    }
+    .highlight {
+      background-color: rgba(246, 189, 5, 0.5);
+    }
+  }
+
+  #step-two {
+    .circle {
+      background-color: rgba(198, 11, 126, 1);
+      margin-bottom: 0.5rem;
+    }
+    .title {
+      color: rgb(198, 11, 126);
+    }
+    .highlight {
+      background-color: rgba(198, 11, 126, 0.5);
+    }
+    .img-msg {
+      width: 90%;
+      margin: 0 auto 2rem;
+      display: block;
+    }
+  }
+
+  #step-three {
+    .circle {
+      background-color: rgba(11, 157, 218, 1);
+      margin-bottom: 0.5rem;
+    }
+    .title {
+      color: rgb(11, 157, 218);
+    }
+    .highlight {
+      background-color: rgba(11, 157, 218, 0.5);
+    }
+  }
+
+  #step-four {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    .circle {
+      background-color: rgba(4, 150, 121, 1);
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .title {
+      color: rgb(4, 150, 121);
+    }
+    .highlight {
+      background-color: rgba(4, 150, 121, 0.5);
+    }
+  }
+}
+
+#integracion .second {
+  flex-grow: 1;
+  padding: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  @include md-screen {
+    justify-content: space-between;
+  }
+  @include xl-screen {
+    max-height: 300px;
+  }
+  .panel {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    h1:first-of-type {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin: 0 1.5rem 0 1rem;
+    }
+    .btn-wrapper {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      position: relative;
+      @include md-screen {
+        border-left: 4px solid #e6e5e5;
+        padding-left: 2rem;
+      }
+      a {
+        width: 100%;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 3px;
+        padding: 3px;
+        box-shadow: none;
+      }
+    }
+  }
+  .img-uni {
+    width: 200px;
+    height: 135px;
+    display: block;
+    cursor: pointer;
+    transition: all 0.4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

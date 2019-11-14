@@ -16,7 +16,7 @@ export class TplContactoComponent implements OnInit {
       'gender': 'f'
     },
     {
-      'title': 'Mercadeo',
+      'title': 'Marcas y marcas de canal',
       'name': 'Santiago Silva',
       'position': 'Socio de negocio talento & negocio',
       'email': 'ssilva@casaluker.com.co',
