@@ -14,6 +14,15 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     account: Account;
     modalRef: NgbModalRef;
 
+    public carouselImages = [
+        // Se añade la fecha actual "getTime()" a la url de la imagen, para no guardarla en cache.
+        // Esto debido a la solicitud de obtener imagenes desde un repositorio independiente.
+        'https://ylrodriguez.000webhostapp.com/img/main.jpg?d=' + new Date().getTime(),
+        'https://ylrodriguez.000webhostapp.com/img/imagen-1.jpg?d=' + new Date().getTime(),
+        'https://ylrodriguez.000webhostapp.com/img/imagen-2.jpg?d=' + new Date().getTime(),
+        'https://ylrodriguez.000webhostapp.com/img/imagen-3.jpg?d=' + new Date().getTime(),
+    ];
+
     constructor(
         private principal: Principal,
         private loginModalService: LoginModalService,

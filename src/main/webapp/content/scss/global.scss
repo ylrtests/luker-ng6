@@ -31,9 +31,8 @@
 }
 
 @font-face {
-  font-family: 'Cheddar Jack';
-  src: url('../fonts/CheddarJack.woff2') format('woff2'),
-      url('../fonts/CheddarJack.woff') format('woff');
+  font-family: "Cheddar Jack";
+  src: url("../fonts/CheddarJack.woff2") format("woff2"), url("../fonts/CheddarJack.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -293,7 +292,7 @@ ui bootstrap tweaks
     background-size: cover;
     width: 100%;
     border-bottom: 4px solid #fff;
-    @include lg-screen{
+    @include lg-screen {
       max-height: 645px;
     }
   }
@@ -398,10 +397,10 @@ ui bootstrap tweaks
   &.sixth {
     filter: colorFilter(sixth);
   }
-  &.white{
+  &.white {
     filter: colorFilter(white);
   }
-  &.grey{
+  &.grey {
     filter: colorFilter(grey);
   }
 }
@@ -458,12 +457,26 @@ ui bootstrap tweaks
 }
 
 // Estilo modal definicion estratégica
-.modal-def .modal-dialog{
+.modal-def .modal-dialog {
   @include md-screen {
     max-width: 800px;
   }
   .modal-content {
     border: none;
+  }
+}
+
+//Estilo modal de roles integracion
+.modal-rol .modal-dialog {
+  @include md-screen {
+    max-width: 75%;
+    margin: 0.5rem auto;
+  }
+  .modal-content {
+    border: none;
+  }
+  .modal-body {
+    padding: 0;
   }
 }
 

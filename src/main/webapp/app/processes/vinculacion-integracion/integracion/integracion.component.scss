@@ -1,15 +1,6 @@
 @import "src/main/webapp/content/scss/custom-functions";
 @import "src/main/webapp/content/scss/custom-variables";
-/*
-Colores
-1:  f6bd05 .7
-2:  c60b7e
-3: 0b9dda
-4: 049679
 
-titulos: 4e4d4d
-Firma contrato: 70706f
-*/
 #integracion .first {
   background-color: #fff;
   min-height: 66vh;
@@ -84,6 +75,40 @@ Firma contrato: 70706f
       border-radius: 10px;
       padding: 0 5px;
       margin: 5px 0;
+      position: relative;
+      .media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        top: 0;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        overflow: auto;
+        z-index: 2;
+        width: 550px;
+        height: 320px;
+        padding: 0.5rem;
+        transition: visibility 0.3s linear, opacity 0.3s linear;
+        @include lg-screen {
+          &.right {
+            left: 80%;
+          }
+          &.left {
+            right: 80%;
+          }
+        }
+        a {
+          margin: auto;
+        }
+      }
+      &:hover .media,
+      .media:hover {
+        opacity: 1;
+        visibility: initial;
+      }
     }
   }
 
@@ -187,7 +212,7 @@ Firma contrato: 70706f
         border-left: 4px solid #e6e5e5;
         padding-left: 2rem;
       }
-      a {
+      button {
         width: 100%;
         font-size: 0.75rem;
         text-transform: uppercase;
@@ -208,4 +233,32 @@ Firma contrato: 70706f
       transform: scale(1.1);
     }
   }
+}
+
+// Estilos del modal roles
+.modal-header {
+  padding: 0;
+  flex-flow: column nowrap;
+  border-bottom: 0;
+  .header-top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: color(primary);
+    height: 35px;
+    margin-bottom: 0.5rem;
+    img {
+      height: 65%;
+      width: 25px;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.img-auto {
+  height: auto;
+  width: 100%;
 }
