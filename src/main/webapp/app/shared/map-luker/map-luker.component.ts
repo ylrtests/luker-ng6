@@ -16,6 +16,7 @@ export class MapLukerComponent implements OnInit, AfterViewInit {
   modalRef: NgbModalRef;
   @Input() activeElement ? = 0; // Indica cual elemento del mapa resaltar. Si es 0 ninguno es resaltado
   @Input() shouldOpenLogin ? = false; // Si es igual a "true" debería abrir el login en vez de redireccionar a un proceso.
+  @Input() fastLoad ? = false; // Si es igual a "true" carga más rápido de acuerdo a lo definido en animateMap()
 
   constructor(private elem: ElementRef, private router: Router, private loginModalService: LoginModalService) { }
 
@@ -43,6 +44,13 @@ export class MapLukerComponent implements OnInit, AfterViewInit {
   }
 
   animateMap() {
+    let timeOut = 1000;
+    let timeItem = 700;
+    //Carga más rápido
+    if(this.fastLoad){
+      timeOut = timeOut/1.8;
+      timeItem = timeItem/1.8;
+    }
     setTimeout(() => {
       for (const t of this.titles) {
         t.style.opacity = 1;
@@ -66,8 +74,8 @@ export class MapLukerComponent implements OnInit, AfterViewInit {
           this.shadowItems.style.opacity = 1;
           clearInterval(intervalo);
         }
-      }, 700);
-    }, 1000);
+      }, timeItem);
+    }, timeOut);
   }
 
   clickMapItem(link: string) {
