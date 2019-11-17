@@ -7,7 +7,7 @@ import { COMPROMISO_RECONO_ROUTE } from './compromiso-recono/compromiso-recono.r
 import { CIERRE_EXITOSO_ROUTE } from './cierre-exitoso/cierre-exitoso.route';
 import { UNIVERSIDAD_LUKER_ROUTE } from './universidad-luker/universidad-luker.route';
 import { ProcessesComponent } from './processes.component';
-import { TplContactoComponent } from './templates/tpl-contacto/tpl-contacto.component';
+import { TplContactoComponent } from '../shared/templates/tpl-contacto/tpl-contacto.component';
 
 export const PROCESSES_ROUTE: Route = {
   path: 'proceso',

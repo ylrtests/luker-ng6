@@ -48,8 +48,7 @@
         <ul class="list text-justify">
           <ng-container *ngTemplateOutlet="defaultListProcesos"></ng-container>
         </ul>
-        <!-- <a *ngIf="canShowCajaHerramientas()" class="btn btn-brand" (click)="cajaHerramientasModal.open()"> -->
-        <a *ngIf="canShowCajaHerramientas()" class="btn btn-brand">
+        <a *ngIf="canShowCajaHerramientas()" class="btn btn-brand" (click)="cajaHerramientasModal.open()">
           <span class="font-weight-bold">Caja de herramientas</span>
           <span class="btn-badge"><img src="/content/icons/tool.svg" alt="" class="icon primary"></span>
         </a>
@@ -75,7 +74,7 @@
 
 
 <!-- Modal Caja de Herramientas -->
-<!-- <jhi-tpl-caja-herramientas #cajaHerramientasModal [processNumber]="4"
-    [elementsCajaHerramientas]="elementsCajaHerramientas" [titleFirstColumn]="'Formatos\npara descargar'"
-    [titleSecondColumn]="'Consulta\naqui'" [titleProcess]="'Desempeño y desarrollo'" [positionTitleProcess]="'center'">
-</jhi-tpl-caja-herramientas> -->
+<jhi-tpl-caja-herramientas #cajaHerramientasModal
+    [elementsCajaHerramientas]="elementsCajaHerramientas" [titleFirstColumn]="''"
+    [titleSecondColumn]="''">
+</jhi-tpl-caja-herramientas>

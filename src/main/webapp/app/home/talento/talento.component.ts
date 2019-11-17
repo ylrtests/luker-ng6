@@ -8,6 +8,31 @@ import { Location } from '@angular/common';
 })
 export class TalentoComponent implements OnInit, AfterViewInit, OnDestroy {
   public processClasses: any;
+  elementsCajaHerramientas = {
+    first: [ // Elementos de la primera columna
+      {
+        subtitle: '',
+        items: [
+          { title: 'Grupo 1 Módulo 2 Definiendo el norte', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
+          { title: 'Grupo 1 Módulo 3 Conformando al mejor equipo', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
+          { title: 'Grupo 1 Módulo 4 Logrando los mejores resultados', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
+          { title: 'Grupo 1 Módulo 5 Comprometiendo e integrando a nuestros equipos', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
+          { title: 'Grupo 1 Módulo 6 Gestionar el desempeño y desarrollar a nuestro equipo', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
+          { title: 'Grupo 1 Módulo 7 Maestros que comprometen a sus equipos', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' }
+        ]
+      }
+    ],
+    second: [
+      {
+        subtitle: '',
+        items: [
+          { title: 'Grupo 2 Módulo 2 Conformando e integrando al mejor equipo', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
+          { title: 'Grupo 2 Módulo 3 Logrando los mejores resultados', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
+          { title: 'Grupo 2 Módulo 4 Maestros que comprometen a sus equipos.', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' }
+        ]
+      }
+    ]
+  };
 
   constructor(private elementRef: ElementRef,
     private renderer2: Renderer2, private location: Location) { }
@@ -37,7 +62,7 @@ export class TalentoComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   /**
-   * Método que válidaría si el usuario puede
+   * Método que validaría si el usuario puede
    * o no ver el botón de caja de herramientas
    */
   canShowCajaHerramientas() {

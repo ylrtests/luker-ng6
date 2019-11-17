@@ -5,8 +5,6 @@ import { PROCESSES_ROUTE } from './processes.route';
 
 import { LukerSharedModule } from 'app/shared/shared.module';
 import { ProcessesComponent } from './processes.component';
-import { TplDefinicionesComponent } from './templates/tpl-definiciones/tpl-definiciones.component';
-import { TplCajaHerramientasComponent } from './templates/tpl-caja-herramientas/tpl-caja-herramientas.component';
 import { VinculacionIntegracionComponent } from './vinculacion-integracion/vinculacion-integracion.component';
 import { VinculacionComponent } from './vinculacion-integracion/vinculacion/vinculacion.component';
 import { IntegracionComponent } from './vinculacion-integracion/integracion/integracion.component';
@@ -23,14 +21,11 @@ import { CompromisoReconoComponent } from './compromiso-recono/compromiso-recono
 import { DefCompromisoReconoComponent } from './compromiso-recono/definiciones/def-compromiso-recono.component';
 import { CierreExitosoComponent } from './cierre-exitoso/cierre-exitoso.component';
 import { DefCierreExitosoComponent } from './cierre-exitoso/definiciones/def-cierre-exitoso.component';
-import { TplContactoComponent } from './templates/tpl-contacto/tpl-contacto.component';
 
 @NgModule({
     imports: [LukerSharedModule, RouterModule.forChild([PROCESSES_ROUTE])],
     declarations: [
         ProcessesComponent,
-        TplDefinicionesComponent,
-        TplCajaHerramientasComponent,
         VinculacionIntegracionComponent,
         VinculacionComponent,
         IntegracionComponent,
@@ -46,8 +41,7 @@ import { TplContactoComponent } from './templates/tpl-contacto/tpl-contacto.comp
         CompromisoReconoComponent,
         DefCompromisoReconoComponent,
         CierreExitosoComponent,
-        DefCierreExitosoComponent,
-        TplContactoComponent
+        DefCierreExitosoComponent
     ]
 })
 export class LukerProcessesModule { }

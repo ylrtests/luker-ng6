@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { TplCajaHerramientasComponent } from '../templates/tpl-caja-herramientas/tpl-caja-herramientas.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PlatformLocation } from '@angular/common';
 
@@ -50,8 +49,6 @@ export class AlineacionEstrategicaComponent implements OnInit {
     ]
   };
   modalReference: any;
-
-  @ViewChild(TplCajaHerramientasComponent) cajaHerramientas: TplCajaHerramientasComponent;
 
   constructor(private modalService: NgbModal, private location: PlatformLocation) { }
 

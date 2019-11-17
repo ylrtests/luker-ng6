@@ -46,10 +46,10 @@ export class MapLukerComponent implements OnInit, AfterViewInit {
   animateMap() {
     let timeOut = 1000;
     let timeItem = 700;
-    //Carga más rápido
-    if(this.fastLoad){
-      timeOut = timeOut/1.8;
-      timeItem = timeItem/1.8;
+    // Carga más rápido
+    if (this.fastLoad) {
+      timeOut = timeOut / 1.8;
+      timeItem = timeItem / 1.8;
     }
     setTimeout(() => {
       for (const t of this.titles) {

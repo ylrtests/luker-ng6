@@ -22,9 +22,9 @@ export class IntegracionComponent implements OnInit {
         'isVideo': true
       },
       { 'text': '3. Información previa de la organización (t&g)', 'isHighlighted': true, 'src': '/content/images/integracion/info-organizacion.jpg' },
-      { 'text': '4. Solicitud documentos de ingreso' },
-      { 'text': '5. Información para el primer día de ingreso', 'isHighlighted': true, 'src': '/content/images/integracion/info-primerdia.jpg' },
-      { 'text': '6. Exámenes médicos' }
+      { 'text': '4. Exámenes médicos' },
+      { 'text': '5. Solicitud documentos de ingreso' },
+      { 'text': '6. Información para el primer día de ingreso', 'isHighlighted': true, 'src': '/content/images/integracion/info-primerdia.jpg' },
     ],
     // Primer día
     second: [
@@ -39,7 +39,7 @@ export class IntegracionComponent implements OnInit {
     // Primer mes
     third: [
       { 'text': '1. Inducción al cargo.', 'isHighlighted': true },
-      { 'text': '2. Comunicado de las nuevas caras de nuestra casa.', 'isHighlighted': true },
+      { 'text': '2. Comunicado de las nuevas caras de nuestra casa.', 'isHighlighted': true, 'src': '/content/images/integracion/nuevas-caras.jpg' },
       { 'text': '3. Verificación del proceso de inducción.', 'isHighlighted': true, 'src': '/content/images/integracion/verificacion.jpg'}
     ],
     // Primer trimestre

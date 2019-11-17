@@ -21,7 +21,7 @@
             </ul>
         </div>
         <div id="step-two" class="col-md-6 col-lg-3 item">
-            <img class="img-msg" src="/content/images/int-msg.png" alt="">
+            <img class="img-msg" src="/content/images/integracion/int-msg.png" alt="">
             <ul class="list">
                 <li *ngFor="let item of steps.second" [ngClass]="{'highlight': item.isHighlighted}">{{item.text}}
                     <div class="media right" *ngIf="item.isHighlighted">
@@ -85,7 +85,7 @@
                     Ciudades</button>
             </div>
         </div>
-        <img class="img-uni" src="/content/images/int-uni.png" alt="" (click)="openUniversity()">
+        <img class="img-uni" src="/content/images/integracion/int-uni.png" alt="" (click)="openUniversity()">
     </div>
 </div>
 
@@ -97,6 +97,7 @@
         </div>
     </div>
     <div class="modal-body">
+        <h3 class="title-modal">Ten en cuenta que las actividades subrayadas hacen parte de tus responsabilidades</h3>
         <img class="img-auto" src="{{imgRol}}" alt="Definición estratégica">
     </div>
 </ng-template>

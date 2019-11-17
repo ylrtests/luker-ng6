@@ -11,7 +11,7 @@ export class TplCajaHerramientasComponent implements OnInit {
 
   @ViewChild('modalTools') modalCajaHerramientas: TemplateRef<any>;
   @Input() elementsCajaHerramientas;
-  @Input() processNumber = 1;
+  @Input() processNumber = 0;
   @Input() titleFirstColumn = 'Placeholder';
   @Input() titleSecondColumn = 'Placeholder';
   @Input() titleProcess = '';
@@ -29,6 +29,14 @@ export class TplCajaHerramientasComponent implements OnInit {
     // En un objeto, asigna las clases que usará,
     // de acuerdo al proceso del mapa de gestión en el que se encuentre
     switch (this.processNumber) {
+      // Colores por defecto Caso 0
+      case 0:
+        this.processClasses = {
+          'bg': 'bg-brand',
+          'color': 'text-brand',
+          'icon': 'primary'
+        };
+        break;
       case 1:
         this.processClasses = {
           'bg': 'bg-1',
@@ -82,12 +90,12 @@ export class TplCajaHerramientasComponent implements OnInit {
 
   open() {
     if (this.elementsCajaHerramientas.second) {
-      this.modalReference =  this.modalService.open(this.modalCajaHerramientas, { windowClass: 'toolbox' });
+      this.modalReference = this.modalService.open(this.modalCajaHerramientas, { windowClass: 'toolbox' });
     } else {
-      this.modalReference =  this.modalService.open(this.modalCajaHerramientas, { windowClass: 'toolbox-sm' });
+      this.modalReference = this.modalService.open(this.modalCajaHerramientas, { windowClass: 'toolbox-sm' });
     }
-     // Closes modal when back button is clicked
-    this.location.onPopState( () => this.modalReference.close());
+    // Closes modal when back button is clicked
+    this.location.onPopState(() => this.modalReference.close());
   }
 
 }

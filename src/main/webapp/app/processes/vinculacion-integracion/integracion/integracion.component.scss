@@ -235,6 +235,11 @@
   }
 }
 
+.img-auto {
+  height: auto;
+  width: 100%;
+}
+
 // Estilos del modal roles
 .modal-header {
   padding: 0;
@@ -258,7 +263,18 @@
   }
 }
 
-.img-auto {
-  height: auto;
-  width: 100%;
+.modal-body {
+  .title-modal {
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #4d4d4d;
+  }
+  .img-auto {
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+  }
 }

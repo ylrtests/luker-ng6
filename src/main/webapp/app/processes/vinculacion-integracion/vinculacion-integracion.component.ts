@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
-import { TplCajaHerramientasComponent } from '../templates/tpl-caja-herramientas/tpl-caja-herramientas.component';
 
 @Component({
   selector: 'jhi-vinculacion-integracion',
@@ -34,8 +33,6 @@ export class VinculacionIntegracionComponent implements OnInit, OnDestroy {
       }
     ]
   };
-
-  @ViewChild(TplCajaHerramientasComponent) cajaHerramientas: TplCajaHerramientasComponent;
 
   constructor() { }
 
