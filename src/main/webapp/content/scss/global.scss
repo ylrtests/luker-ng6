@@ -482,8 +482,6 @@ ui bootstrap tweaks
 }
 
 // Clases de colores  y fondos para los procesos
-
-// Empieza colores
 .text-brand {
   color: color(primary) !important;
 }
@@ -540,7 +538,7 @@ ui bootstrap tweaks
   &.dark {
     color: color(sixth-dark);
   }
-} // Fin colores
+}
 // Fondos
 .bg-brand {
   background-color: color(primary);
@@ -598,6 +596,101 @@ ui bootstrap tweaks
   &.dark {
     background-color: color(sixth-dark);
   }
-} // Fin fondos
+}
+
+// Keyframes y clases de animaciones
+@keyframes slideToBottom {
+  0% {
+    opacity: 0;
+    bottom: 150px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes slideToTop {
+  0% {
+    opacity: 0;
+    top: 150px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes slideToLeft {
+  0% {
+    opacity: 0;
+    left: 50%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes slideToRight {
+  0% {
+    opacity: 0;
+    right: 50%;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes tremble {
+  20% {
+    transform: rotate(1deg);
+  }
+  40% {
+    transform: rotate(-1deg);
+  }
+  60% {
+    transform: rotate(1deg);
+  }
+  80% {
+    transform: rotate(-1deg);
+  }
+}
+
+.hide {
+  opacity: 0;
+}
+
+.slide-to-bottom {
+  animation-name: slideToBottom;
+  animation-duration: 1s;
+  animation-fill-mode: initial;
+}
+
+.slide-to-top {
+  animation-name: slideToTop;
+  animation-duration: 1s;
+  animation-fill-mode: initial;
+}
+
+.slide-to-left {
+  animation-name: slideToLeft;
+  animation-duration: 1.3s;
+  animation-fill-mode: initial;
+}
+
+.slide-to-right {
+  animation-name: slideToRight;
+  animation-duration: 1.3s;
+  animation-fill-mode: initial;
+}
+
+.tremble {
+  animation-name: tremble;
+  animation-duration: 1s;
+  animation-fill-mode: initial;
+  animation-iteration-count: 3;
+}
 
 /* jhipster-needle-scss-add-main JHipster will add new css style */

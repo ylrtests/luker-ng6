@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PlatformLocation } from '@angular/common';
@@ -12,7 +12,9 @@ export class IntegracionComponent implements OnInit {
 
   private modalReference: any;
   public imgRol: string;
-  public steps = {
+  // Variable que almacena todos los pasos del componente integración, e incluye la url del
+  // recurso en caso de tener.
+  public stepsInfo = {
     // Primera aproximación
     first: [
       { 'text': '1. Llamada a firmar contrato (talento & gestión en compañia de jefe inmediato)' },
@@ -40,7 +42,7 @@ export class IntegracionComponent implements OnInit {
     third: [
       { 'text': '1. Inducción al cargo.', 'isHighlighted': true },
       { 'text': '2. Comunicado de las nuevas caras de nuestra casa.', 'isHighlighted': true, 'src': '/content/images/integracion/nuevas-caras.jpg' },
-      { 'text': '3. Verificación del proceso de inducción.', 'isHighlighted': true, 'src': '/content/images/integracion/verificacion.jpg'}
+      { 'text': '3. Verificación del proceso de inducción.', 'isHighlighted': true, 'src': '/content/images/integracion/verificacion.jpg' }
     ],
     // Primer trimestre
     fourth: [
@@ -50,9 +52,52 @@ export class IntegracionComponent implements OnInit {
     ]
   };
 
-  constructor(private router: Router, private modalService: NgbModal, private location: PlatformLocation) { }
+  constructor(private router: Router, private modalService: NgbModal, private location: PlatformLocation, private elem: ElementRef) { }
 
   ngOnInit() {
+    const steps = this.elem.nativeElement.querySelectorAll('.item');
+    const panel = this.elem.nativeElement.querySelector('.panel');
+    const imgUni = this.elem.nativeElement.querySelector('.img-uni');
+    const timeOutBetweenSteps = 650;
+    let i = 0;
+
+    // Animación de la página
+    const intervalo = setInterval(() => {
+      if (i < steps.length) {
+        if (((i + 1) % 2) === 0) {
+          steps[i].classList.add('slide-to-top');
+        } else {
+          steps[i].classList.add('slide-to-bottom');
+        }
+        steps[i].classList.remove('hide');
+        i++;
+      } else {
+        this.animateHighlights();
+        panel.classList.add('slide-to-right');
+        panel.classList.remove('hide');
+        setTimeout(() => {
+          imgUni.classList.add('slide-to-right');
+          imgUni.classList.remove('hide');
+        }, 400);
+        clearInterval(intervalo);
+      }
+    }, timeOutBetweenSteps);
+  }
+
+  animateHighlights() {
+    const timeOutHighlights = 300;
+    const highlights = this.elem.nativeElement.querySelectorAll('.highlight');
+    let i = 0;
+
+    // Animación de los botones
+    const intervaloDos = setInterval(() => {
+      if (i < highlights.length) {
+        highlights[i].classList.add('tremble');
+        i++;
+      } else {
+        clearInterval(intervaloDos);
+      }
+    }, timeOutHighlights);
   }
 
   openUniversity() {

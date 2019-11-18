@@ -1,6 +1,10 @@
 @import "src/main/webapp/content/scss/custom-functions";
 @import "src/main/webapp/content/scss/custom-variables";
 
+.brand-container {
+  overflow: hidden;
+}
+
 #integracion .first {
   background-color: #fff;
   min-height: 66vh;
@@ -229,6 +233,7 @@
     display: block;
     cursor: pointer;
     transition: all 0.4s;
+    position: relative;
     &:hover {
       transform: scale(1.1);
     }
