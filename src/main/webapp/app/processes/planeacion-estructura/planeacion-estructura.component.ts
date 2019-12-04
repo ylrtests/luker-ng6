@@ -22,6 +22,7 @@ export class PlaneacionEstructuraComponent implements OnInit {
         subtitle: '',
         items: [
           { title: 'Guía estructuración de áreas', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
+          { title: 'Herramienta de revisión de estructura', url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' },
         ]
       }
     ]
